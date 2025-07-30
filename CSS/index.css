@@ -203,7 +203,10 @@ form #submit{
 }
 #copyright{
     text-align: center;
-    height: 120px;
+    height: 80px;
+    background-color:  black;
+    color: white;
+    border: none;
     
 }
 #copyright p{

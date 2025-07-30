@@ -68,6 +68,7 @@ header nav ul a:hover {
 /*Main*/
 main{
     margin-top: 70px;
+
     
 }
 main h3{
@@ -87,7 +88,7 @@ main #info{
     display: flex;
     justify-content: space-around;
     margin-bottom: 60px;
-    
+
 }
 
 .email {
@@ -124,4 +125,105 @@ main #info{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+#sec1{
+    
+    padding-top: 10px;
+}
+footer #sec1 figure img{
+    width: 80px;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+#sec1 form{
+    padding-bottom: 20px;
+}
+form #email{
+    width: 200px;
+    height: 30px;
+    padding: 2px 30px;
+    border-radius: 6px;
+    border: 1px solid;
+    
+}
+form #submit{
+    width: 100px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ccc;
+    background-color: black;
+}
+
+#sec1 p{
+    margin-bottom: 20px;
+}
+
+#sec2{
+    padding-top: 10px;
+}
+
+#sec2 h3{
+    margin-bottom: 10px;
+    color: black;
+}
+#sec2  a{
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+#sec2 a:hover{
+    text-decoration: underline;
+}
+
+#sec3{
+    padding-top: 10px;
+    text-align: center;
+}
+
+#sec3 h3{
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+}
+
+
+#sec3 a{
+    text-decoration: none;
+    color: black;
+    
+    width: 30px;
+}
+
+#sec3 a img{
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#sec3 a:hover{
+    box-shadow: 6px 10px 19px 8px rgb(22, 22, 22);
+}
+#copyright{
+    text-align: center;
+    height: 80px;
+    background-color: black;
+    color: white;
+    
+}
+#copyright p{
+    padding-top: 25px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
 }
