@@ -203,13 +203,13 @@ form #submit{
 }
 #copyright{
     text-align: center;
-    height: 80px;
+    height: 150px;
     background-color:  black;
     color: white;
     border: none;
     
 }
 #copyright p{
-    padding-top: 25px;
+    padding-top: 100px;
     font-size: 14px;
 }
