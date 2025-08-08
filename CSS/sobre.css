@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+header .cabecalho{
+    display: flex;
+    justify-content: space-around;
+    
+    background-color: black;
+}
+
+.cabecalho .searchLogo{
+    display: flex;
+    justify-content: space-between;
+}
+.cabecalho .searchLogo img{
+    width: 130px;
+    height: 70px;
+}
+#search{
+
+    display: flex;
+    align-items: center;
+    border: 1xp solid #ccc;
+    background-color: rgb(247, 240, 240);
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #4b4b4b;
+    margin-left: 30px;
+}
+#searchInput{
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    width: 120px;
+    height: 5px;
+    outline: none;
+}
+#search label{
+    height: 20px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+header nav ul a{
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid transparent;
+    font-family: 'Roboto', sans-serif;
+}
+header nav ul a:hover {
+    text-decoration: underline ;
+    transition: 1s ease;
+}
+
+
+ /*Main*/
+
+main{
+    margin: auto;
+    margin-top: 70px;
+    padding: 50px;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+main .sobre{
+    border-radius: 8px;
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #faf8f8;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    height: 400px;
+}
+.equipe{
+    margin-top: 40px;
+    padding: 100px;
+}
+
+.equipe .membros1{
+    display: flex;
+    justify-content: space-around;
+}
+.equipe .membros1 div:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease;
+
+}
+
+.equipe .membros1 .informacao{
+    width: 250px;
+    height: 340px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+
+}
+.equipe .membros1 .informacao figure{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.equipe .membros1 .informacao img{
+    padding-top: 150px;
+    width: 35px;
+    height: 35px;
+    
+    
+}
+
+.equipe .membros1 .informacao1{
+    background-image: url(../IMG/Sobre/IMG_0004.jpg);
+}
+
+.equipe .membros1 :where(.informacao1, .informacao2, .informacao3){
+    width: 230px;
+    height: 320px;
+    padding: 20px;          
+    background-size: cover;        /* Preenche todo o espaço */
+    background-position: center;   /* Centraliza a imagem */
+    background-repeat: no-repeat;  
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    
+}
+.equipe .membros1 :is( .informacao1 h3, .informacao2 h3){
+    font-size: 20px; 
+    margin-top: 260px;
+}
+.informacao2{
+    background-image: url(../IMG/Sobre/IMG_0022.jpg);
+    background-size: contain ;
+    background-repeat: no-repeat ;
+}
+/**/
+.equipe .membros{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.equipe .membros  :where(.informacao3, .informacao4, .informacao5){
+    width: 230px;
+    height: 320px;
+    background-size: cover;        /* Preenche todo o espaço */
+    background-position: center;   /* Centraliza a imagem */
+    background-repeat: no-repeat;  
+    border-radius: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    
+}
+.equipe .membros div:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease;
+
+}
+.equipe .membros :is( .informacao3 h3, .informacao4 h3, .informacao5 h3){
+    font-size: 20px; 
+    margin-top: 260px;
+}
+.equipe .membros .informacao3{
+    background-image: url(../IMG/Sobre/IMG_0022.jpg);
+}
+.equipe .membros .informacao4{
+    background-image: url(../IMG/Sobre/IMG_0004.jpg);
+}
+.equipe .membros .informacao5{
+    background-image: url(../IMG/Sobre/IMG_0135.jpg);
+}
