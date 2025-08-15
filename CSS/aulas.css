@@ -72,7 +72,132 @@ header nav ul a:hover {
 main{
     margin: auto;
     margin-top: 70px;
-    padding: 50px;
+    padding: 70px;
     font-family: 'Roboto', sans-serif;
     background-color: white;
 }
+
+main .apresentacao{
+    text-align: center;
+    height: 170px;
+    padding-bottom: 50px;
+    background-image: url(../IMG/aulas/pexels-wendyaffieplaas-1112048.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+    
+    
+}
+
+
+.apresentacao .conteudo{
+    line-height: 1.5;
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-block: 1rem * 5;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+    
+}
+.botoes button{
+    padding: 10px 20px;
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px;
+    margin-bottom: 100px;
+    transition: background-color 0.3s ease;
+}
+.botoes .btn1{
+    background-color: black;
+    color: white;
+}
+.botoes .btn1:hover{
+    background-color: #333; 
+}
+
+.botoes .btn2{
+    border: 1px solid black;
+    color: black;
+}
+
+/*Pesquisa*/
+
+#search{
+    
+    display: flex;
+    align-items: center;
+    border: 1xp solid #ccc;
+    background-color: rgb(247, 240, 240);
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #4b4b4b;
+    margin-left: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+   
+}
+#searchInput{
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    width: 250px;
+    height: 15px;
+    outline: none;
+    background-color: #e4e2e2;
+    border-radius: 10px;
+}
+#search label{
+    height: 20px;
+    
+}
+
+.aulas{
+    padding-top: 50px;
+    margin: 20px;
+}
+
+/*Conteudos*/
+
+.aulas :where(.conteudo1, .conteudo2, .conteudo3){
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.aulas :where(.conteudo1 .fila1, .conteudo2 .fila2, .conteudo3 .fila3) {
+    margin-top: 30px;
+    height: 260px;
+    width: 400px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 0% 0% 10px 10px;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2)   ;
+}
+
+.aulas :where(.conteudo1 .fila1, .conteudo2 .fila2, .conteudo3 .fila3):hover{
+    box-shadow: 0 18px  16px rgba(100, 99, 99, 0.2);
+    transition: box-shadow 0.3s ease;
+    
+}
+
+
+.aulas :where(.conteudo1 .fila1 iframe, .conteudo2 .fila2 iframe, .conteudo3 .fila3 iframe){
+    width:400px;
+    height:200px;
+}
+
+
+
+
