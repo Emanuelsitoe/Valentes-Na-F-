@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+header .cabecalho{
+    display: flex;
+    justify-content: space-around;
+    
+    background-color: black;
+}
+
+.cabecalho .searchLogo{
+    display: flex;
+    justify-content: space-between;
+}
+.cabecalho .searchLogo img{
+    width: 130px;
+    height: 70px;
+}
+#search{
+
+    display: flex;
+    align-items: center;
+    border: 1xp solid #ccc;
+    background-color: rgb(247, 240, 240);
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #4b4b4b;
+    margin-left: 30px;
+}
+#searchInput{
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    width: 120px;
+    height: 5px;
+    outline: none;
+}
+#search label{
+    height: 20px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+header nav ul a{
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid transparent;
+    font-family: 'Roboto', sans-serif;
+}
+header nav ul a:hover {
+    text-decoration: underline ;
+    transition: 1s ease;
+}
+
+/*Main*/
+
+main{
+    margin-top: 100px;
+    
+}
+
+main .preco{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+main .preco .tabelaPreco{
+    background-color: #f2f1f1;
+    width: 330px;
+    height: 300px;
+    padding: 10px;
+
+}
+.tabelaPreco h3 b{
+    font-size: 1.5em;
+}
+.tabelaPreco p{
+    margin-bottom: 9px;
+}
