@@ -72,7 +72,7 @@ main{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 700px;
     
 }
 main h3{
@@ -82,16 +82,13 @@ main h3{
     margin-top: 100px;
 }
 
-main #mapa{
-    margin-left: 200px;
-}
+
 
 main #info{
-    padding-top: 180px;
+    padding-top: 90px;
     font-family:'Roboto', sans-serif;
     display: flex;
     justify-content: space-around;
-    margin-bottom: px;
 
 }
 #info .endereco span{
@@ -136,6 +133,14 @@ main #info{
     width: 370px;
     font-family: 'Roboto', sans-serif;
 
+}
+
+main #mapa iframe{
+    width: 400px;
+    height: 300px;
+    border: 0;
+    margin-left: 200px;
+    margin-top: 20px;
 }
 
 /* Footer */

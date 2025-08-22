@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap');
 *{
     padding: 0;
     border: 0;
@@ -26,7 +26,6 @@ header .cabecalho{
     height: 70px;
 }
 #search{
-
     display: flex;
     align-items: center;
     border: 1xp solid #ccc;
@@ -77,15 +76,123 @@ main{
     background-color: white;
 }
 
+
+/*fundo*/
+
+main .background{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 350px;
+    background-image: url(../IMG/Sobre/7.jpg);
+    background-size: cover;
+    background-position: center ;
+    opacity: 0.8; /* Ajusta a opacidade do fundo */
+    
+}
+main .background h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+main #conteudoSobre{
+    margin-top: 400px;
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+main #conteudoSobre :where(.nossaFe, .nossaMissao){
+    color: black;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    
+}
+main #conteudoSobre :where(.nossaFe, .nossaMissao) h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #34495e;
+    
+  font-family: 'Crimson Text', serif;
+
+  text-transform: uppercase;
+
+
+}
+
+main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*cultos*/
+.horarios{
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: #34495e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    border-radius: 10px;
+    
+    
+      max-width: 900px;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      margin: 40px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: chocolate;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin: 5px 0;
+      line-height: 1.5;
+    }
+
 main .sobre{
     border-radius: 8px;
-    margin-top: 50px;
+    margin-top: 130px;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #faf8f8;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     height: 400px;
 }
 .equipe{
@@ -104,10 +211,11 @@ main .sobre{
 }
 
 .equipe .membros1 .informacao{
-    width: 250px;
-    height: 340px;
+    width: 230px;
+    height: 330px;
     background-color: #f0f0f0;
     padding: 20px;
+    line-height: 25px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 
@@ -118,7 +226,7 @@ main .sobre{
     padding: 5px;
 }
 .equipe .membros1 .informacao img{
-    padding-top: 150px;
+    padding-top: 120px;
     width: 35px;
     height: 35px;
     
@@ -129,12 +237,12 @@ main .sobre{
     background-image: url(../IMG/Sobre/IMG_0004.jpg);
 }
 
-.equipe .membros1 :where(.informacao1, .informacao2, .informacao3){
+.equipe .membros1 :where(.informacao1){
     width: 230px;
-    height: 320px;
+    height: 310px;
     padding: 20px;          
-    background-size: cover;        /* Preenche todo o espaço */
-    background-position: center;   /* Centraliza a imagem */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;  
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
@@ -144,46 +252,11 @@ main .sobre{
     font-size: 20px; 
     margin-top: 260px;
 }
-.informacao2{
-    background-image: url(../IMG/Sobre/IMG_0022.jpg);
-    background-size: contain ;
-    background-repeat: no-repeat ;
-}
-/**/
-.equipe .membros{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-.equipe .membros  :where(.informacao3, .informacao4, .informacao5){
-    width: 230px;
-    height: 320px;
-    background-size: cover;        /* Preenche todo o espaço */
-    background-position: center;   /* Centraliza a imagem */
-    background-repeat: no-repeat;  
-    border-radius: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    
-}
+
 .equipe .membros div:hover{
     transform: scale(1.05);
     transition: 0.3s ease;
 
-}
-.equipe .membros :is( .informacao3 h3, .informacao4 h3, .informacao5 h3){
-    font-size: 20px; 
-    margin-top: 260px;
-}
-.equipe .membros .informacao3{
-    background-image: url(../IMG/Sobre/IMG_0022.jpg);
-}
-.equipe .membros .informacao4{
-    background-image: url(../IMG/Sobre/IMG_0004.jpg);
-}
-.equipe .membros .informacao5{
-    background-image: url(../IMG/Sobre/IMG_0135.jpg);
 }
 
 
