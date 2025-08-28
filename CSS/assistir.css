@@ -64,3 +64,132 @@ header nav ul a:hover {
     text-decoration: underline ;
     transition: 1s ease;
 }
+
+main{
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px;
+}
+
+main .midia{
+    margin-top: 70px;
+    
+}
+
+main .midia{
+    margin-top: 70px;
+}
+    .midia nav {
+      width: 100%;
+      height: 30px;
+      flex-wrap: wrap;
+      padding: 10px;
+      display: flex;
+      justify-content: space-evenly;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      border-radius: 10px;
+    }
+
+    .midia nav a {
+      vertical-align: middle;
+      text-decoration: none;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      padding: 5px;
+      cursor: pointer;
+      
+    }
+    nav .active{
+      background-color: black;
+      border-radius: 5px;
+    }
+    
+
+    .active:hover{
+    background-color: black;
+    text-indent: 5px;
+    box-shadow:  0 0 10px black;
+    transition: 0.5s ease;
+    border-radius: 5px;
+    }
+
+    .conteudo {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .conteudo.ativo {
+      display: block;
+    }
+
+    section {
+        margin-bottom: 40px;
+    }
+
+/*pregacoes*/
+    main {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    main .pregacoes{
+        margin-top: 40px;
+        background-color: #f4f4f4;
+    }
+
+    section {
+        
+        margin-bottom: 40px;
+       
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    #video-grid{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .video-card {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .video-card:hover {
+      transform: scale(1.03);
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .video-desc {
+      padding: 10px;
+      font-size: 0.9rem;
+      text-align: center;
+      background: #ecf0f1;
+    }
+
+    @media (max-width: 900px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      } 
+    }
