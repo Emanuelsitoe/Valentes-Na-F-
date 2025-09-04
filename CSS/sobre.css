@@ -9,12 +9,13 @@ header{
     top: 0;
     position: fixed;
     width: 100%;
+    border-bottom: 1px solid;
 }
 header .cabecalho{
     display: flex;
     justify-content: space-around;
     
-    background-color: black;
+    background-color: white;
 }
 
 .cabecalho .searchLogo{
@@ -56,7 +57,7 @@ header nav{
 header nav ul a{
     padding: 5px;
     text-decoration: none;
-    color: white;
+    color: black;
     border: 1px solid transparent;
     font-family: 'Roboto', sans-serif;
 }
@@ -110,6 +111,7 @@ main #conteudoSobre{
     padding: 20px;
     display: flex;
     border-radius: 10px;
+    flex-wrap: wrap;
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
 }
 main #conteudoSobre :where(.nossaFe, .nossaMissao){
@@ -194,6 +196,7 @@ main .sobre{
     align-items: center;
     justify-content: space-around;
     height: 400px;
+    flex-wrap: wrap;
 }
 .equipe{
     margin-top: 40px;
