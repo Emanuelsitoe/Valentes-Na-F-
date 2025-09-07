@@ -9,6 +9,7 @@ header{
     top: 0;
     position: fixed;
     width: 100%;
+    border-bottom: 1px solid #ccc;
 }
 header .cabecalho{
     display: flex;
@@ -68,157 +69,103 @@ header nav ul a:hover {
 
 
  /*Main*/
-
+:root{
+    --bg:#ffffff;
+    --muted:#f7f7f7;
+    --card:#fbfbfb;
+    --ink:#222;
+    --accent:#f3f4f6; /* muito perto dobranco */
+    --primary:#0b4a6f; /* tom formal ediscreto */
+    --radius:12px;
+    --container:1100px;
+    --glass: rgba(255,255,255,0.6);
+}
 main{
     margin: auto;
     margin-top: 70px;
     padding: 70px;
-    font-family: 'Roboto', sans-serif;
     background-color: white;
 }
-
 main .apresentacao{
-    text-align: center;
-    height: 170px;
-    padding-bottom: 50px;
-    background-image: url(../IMG/aulas/pexels-wendyaffieplaas-1112048.jpg);
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 50px;
-    
-    
+    max-width:var(--container);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+
 }
-
-
-.apresentacao .conteudo{
-    line-height: 1.5;
-    font-size: 1.2em;
-    font-weight: bolder;
-    margin-block: 1rem * 5;
-    hyphens: auto;
-    overflow-wrap: break-word;
+main .brand{
+    display:flex;align-items:center;gap:12px
 }
-
-.botoes{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    
+.brand .logo{
+    width:56px;height:56px;
+    border-radius:10px;
+    background:linear-gradient(180deg,var(--muted),var(--accent));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:var(--primary);
+    font-size:18px;
+    box-shadow:0 6px 18px rgba(12,40,60,0.06)
+}
+h1{
+    font-size:20px;
+    margin:0
     
 }
-.botoes button{
-    padding: 10px 20px;
-    
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin: 10px;
-    margin-bottom: 100px;
-    transition: background-color 0.3s ease;
-    border: none;
-}
-.botoes .btn1{
-    background-color: black;
-    color: white;
-}
-.botoes .btn1:hover{
-    background-color: #333; 
+.hero{
+    margin-top:22px;
+    padding:20px;
+    border-radius:14px;background:linear-gradient(180deg,var(--card),#fff);
+    box-shadow:0 6px 18px rgba(12,40,60,0.04);display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:18px
 }
 
-.botoes .btn2{
-    border: 1px solid black;
-    color: black;
+nav a{
+    margin-left:16px;
+    color:var(--primary);text-decoration:none;font-weight:600
 }
-
-/*Pesquisa*/
-
-#search{
-    
-    display: flex;
-    align-items: center;
-    border: 1xp solid #ccc;
-    background-color: rgb(247, 240, 240);
-    width: 300px;
-    margin: 20px auto;
-    border-radius: 20px;
-    padding: 5px 10px;
-    color: #4b4b4b;
-    margin-left: auto;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow:  1px 4px 8px rgba(0, 0, 0, 0.2);
-   
-}
-#searchInput{
-    padding: 8px;
-    border: none;
-    background-color: transparent;
-    width: 250px;
-    height: 15px;
-    outline: none;
-    background-color: #fdfbfb;
-    border-radius: 10px;
-}
-#search label{
-    height: 20px;
+main .infoEB{
+    max-width:var(--container);
+    margin:auto;
+    margin-top:30px;
+    display:flex;
+    justify-content:space-between;
     
 }
 
-.aulas{
-    padding-top: 50px;
-    margin: 20px;
+.infoEB .hero{
+    margin-top:22px;
+    padding:20px;
+    border-radius:14px;
+    background:linear-gradient(180deg,var(--card),#fff);box-shadow:0 6px 18px rgba(12,40,60,0.04);display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap: 20px;
+}
+.hero{
+    margin-top:22px;
+    padding:20px;
+    border-radius:14px;
+    background:linear-gradient(180deg,var(--card),#fff);box-shadow:0 6px 18px rgba(12,40,60,0.04);display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:18px
+}
+.hero .text{
+    flex:1;
+    min-width:240px
+}
+.hero h2{
+    margin:0 0 6px 0;
+    font-size:22px}
+.hero p{
+    margin:0;
+    color:#555
 }
 
-/*Conteudos*/
-
-.aulas :where(.conteudo1, .conteudo2, .conteudo3){
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.aulas :where(.conteudo1 .fila1, .conteudo2 .fila2, .conteudo3 .fila3) {
-    margin-top: 30px;
-    height: 260px;
-    width: 400px;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 0% 0% 10px 10px;
-    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2)   ;
-}
-
-.aulas :where(.conteudo1 .fila1, .conteudo2 .fila2, .conteudo3 .fila3):hover{
-    box-shadow: 0 18px  16px rgba(100, 99, 99, 0.2);
-    transition: box-shadow 0.3s ease;
-    
-}
-
-
-.aulas :where(.conteudo1 .fila1 iframe, .conteudo2 .fila2 iframe, .conteudo3 .fila3 iframe){
-    width:400px;
-    height:200px;
-}
-
-/*Botao ver mais*/
-
-main .botaover{
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-}
-
-main .botaover .ver{
-    padding: 10px 20px;
-    
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    background-color: black;
-    color: white;
-    transition: background-color 0.3s ease;
-    box-shadow:  0 0 10px 3px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 /*Footer*/
 footer{
