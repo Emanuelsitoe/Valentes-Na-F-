@@ -1,68 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap');
+
 *{
-    padding: 0;
-    border: 0;
     margin: 0;
-}
-header{
-    top: 0;
-    position: fixed;
-    width: 100%;
-}
-header .cabecalho{
-    display: flex;
-    justify-content: space-around;
-    
-    background-color: white;
-}
-
-.cabecalho .searchLogo{
-    display: flex;
-    justify-content: space-between;
-}
-.cabecalho .searchLogo img{
-    width: 130px;
-    height: 70px;
-}
-#search{
-    display: flex;
-    align-items: center;
-    border: 1xp solid #ccc;
-    background-color: rgb(247, 240, 240);
-    width: 200px;
-    margin: 20px auto;
-    border-radius: 20px;
-    padding: 5px 10px;
-    color: #4b4b4b;
-    margin-left: 30px;
-}
-#searchInput{
-    padding: 8px;
-    border: none;
-    background-color: transparent;
-    width: 120px;
-    height: 5px;
-    outline: none;
-}
-#search label{
-    height: 20px;
-}
-
-header nav{
-    display: flex;
-    align-items: center;
-}
-header nav ul a{
-    padding: 5px;
-    text-decoration: none;
-    color: black;
-    border: 1px solid transparent;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-header nav ul a:hover {
-    text-decoration: underline ;
-    transition: 1s ease;
+
+header{
+    top:0;
+    left:0;
+    width:100%;
+    position:fixed;
+    height:70px;
+    background:#fff;
+    box-shadow:0 2px 4px rgba(0,0,0,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    z-index:10;
+}
+
+header img{
+    height:50px;
+}
+
+nav ul{
+    display:flex;
+    gap:15px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#000;
+    padding:5px 10px;
+    border-radius:4px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.hamburger{
+    font-family:'Material Symbols Outlined';
+    font-size:36px;
+    cursor:pointer;
+    display:none;
+}
+
+/* MENU MOBILE */
+.menu{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.5);
+    z-index:20;
+    display:none;
+    align-items:flex-start;
+    justify-content:flex-end;
+}
+
+.menu nav{
+    background:#fff;
+    width:250px;
+    height:100%;
+    padding-top:30px;
+    box-shadow:-2px 0 5px rgba(0,0,0,0.2);
+}
+
+.menu nav ul{
+    flex-direction:column;
+}
+
+.menu nav a{
+    display:block;
+    padding:10px;
+    border-bottom:1px solid #eee;
+    
+}
+
+.menu nav a:hover{
+    background:#f4f4f4;
+    text-decoration:none;
+}
+
+    /* RESPONSIVO */
+@media(max-width:900px){
+    nav{
+        display: none;
+    
+    }
+    .menu nav{
+        display: block;
+    }
+    .hamburger{
+        display:block;
+    }
 }
 
 /* ----------------- FIM CABEÇALHO ----------------- */
@@ -185,104 +223,190 @@ main .cardEventos1 img{
 
 
 /* ----------------- RODAPÉ -----------------*/
+/* Rodapé */    
 footer{
+    background-color: #033363;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 50px;
+    height: 280px;
+}
+
+footer .sessoes{
     display: flex;
     justify-content: space-around;
-    background-color: black;
-    color: #ccc;
-    height: 200px;
+    /*gap: 50px;*/
+    flex-wrap: wrap;
+    height: 190px;
 }
-#sec1{
-    
-    padding-top: 10px;
-}
-footer #sec1 figure img{
-    width: 80px;
+footer .linkscabecalho{
     margin-bottom: 10px;
-    height: 50px;
-}
-
-#sec1 form{
-    padding-bottom: 20px;
-}
-form #email{
-    width: 200px;
-    height: 30px;
-    padding: 2px 30px;
-    border-radius: 6px;
-    border: 1px solid;
-    
-}
-form #submit{
-    width: 100px;
-    height: 30px;
-    border: 1px solid;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #ccc;
-    background-color: black;
-}
-
-#sec1 p{
-    margin-bottom: 20px;
-    color: white;
-}
-
-#sec2{
-    padding-top: 10px;
-}
-
-#sec2 h3{
-    margin-bottom: 10px;
-    color: white;
-}
-#sec2  a{
-    color: white;
     display: block;
-    margin-bottom: 5px;
+    height: 110px;
+}  
+
+footer .linkscabecalho a{
+    color: white;
     text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin: 5px 0;
 }
-#sec2 a:hover{
+
+
+
+footer .linkscabecalho a:hover{
     text-decoration: underline;
 }
 
-#sec3{
-    padding-top: 10px;
-    text-align: center;
-}
-
-#sec3 h3{
+footer .redes-sociais{
     margin-bottom: 10px;
-    color: black;
-    text-align: center;
+    height: 10px;
 }
 
-
-#sec3 a{
-    text-decoration: none;
+footer .redes-sociais a{
     color: white;
-    
-    width: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin: 5px 0;
 }
 
-#sec3 a img{
+.redes-sociais a img{
     width: 30px;
     height: 30px;
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    
+    margin: 5px 5px;
+    vertical-align: middle;
+
 }
 
-#copyright{
-    text-align: center;
-    height: 50px;
-    background-color: white;
-    color: white;
-    
-}
-#copyright p{
-    padding-top: 10px;
+
+
+footer p{
+    margin: 5px 0;
     font-size: 14px;
-    color: black;
+}
+footer p:first-child{
+    font-weight: bold;
+}
+footer p:last-child{
+    font-size: 12px;
+    color: #ccc;
+}
+
+/*responsicidade*/
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+        margin-top: 300px;
+    }
+
+    .background {
+        height: 270px;
+    }
+
+    .background h2 {
+        font-size: 32px;
+        top: 25%;
+        padding-bottom: 10px;
+
+    }
+
+    .background h4 {
+        font-size: 18px;
+        top: 60%;
+    }
+
+    main .cardEventos1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .cardEventos1 .card {
+        width: 90%;
+        height: auto;
+    }
+
+    main .cardEventos1 img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media(max-width: 768px){
+    .background{
+        height: 300px;
+    }
+    .background h2{
+        font-size: 36px;
+    }
+    .background h4{
+        font-size: 25px;
+        padding: 0 20px;
+    }
+
+    main .cardEventos1{
+        width: 100%;
+        height: auto;
+
+    }
+
+}
+
+@media(max-width: 900px){
+    .background{
+        height: 350px;
+    }
+    .background h2{
+        font-size: 40px;
+    }
+
+    .background h4{
+        font-size: 28px;
+        padding: 0 20px;
+    }
+}
+
+@media(max-width: 1024px){
+    .background{
+        height: 380px;
+    }
+    .background h2{
+        font-size: 44px;
+    }
+
+    .background h4{
+        font-size: 30px;
+        padding: 0 20px;
+    }
+}
+
+@media(max-width: 1440px){
+    .background{
+        height: 420px;
+    }
+    .background h2{
+        font-size: 49px;
+    }
+
+    .background h4{
+        font-size: 36px;
+        padding: 0 20px;
+    }
+}
+
+@media(min-width: 1441px){
+    .background{
+        height: 500px;
+    }
+    .background h2{
+        font-size: 60px;
+    }
+
+    .background h4{
+        font-size: 40px;
+        padding: 0 20px;
+    }
 }

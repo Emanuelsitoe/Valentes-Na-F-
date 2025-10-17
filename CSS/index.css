@@ -13,7 +13,6 @@ header{
 header .cabecalho{
     display: flex;
     justify-content: space-around;
-    
     background-color: white;
 }
 
@@ -25,30 +24,7 @@ header .cabecalho{
     width: 130px;
     height: 70px;
 }
-#search{
 
-    display: flex;
-    align-items: center;
-    border: 1xp solid #ccc;
-    background-color: rgb(247, 240, 240);
-    width: 200px;
-    margin: 20px auto;
-    border-radius: 20px;
-    padding: 5px 10px;
-    color: #4b4b4b;
-    margin-left: 30px;
-}
-#searchInput{
-    padding: 8px;
-    border: none;
-    background-color: transparent;
-    width: 120px;
-    height: 5px;
-    outline: none;
-}
-#search label{
-    height: 20px;
-}
 
 header nav{
     display: flex;
