@@ -15,3 +15,30 @@ const links = document.querySelectorAll('nav a');
         document.getElementById(alvo).classList.add('ativo');
       });
     });
+
+
+
+  // Carrega o arquivo JSON com os vídeos
+ 
+
+  // Função para carregar e exibir os vídeos
+let cardvideos = document.getElementsByClassName("video-grid")
+fetch("../JSON/assistir.json")
+  .then((response) => {  
+    response.json().then( (vid)=> {
+        vid.videos.map((video) => {
+            cardvideos.innerHTML += ` 
+              <div class="video-card">
+                  ${video}
+                  <div class="video-desc">${descricao}</div>
+              </div>`
+        })
+    })
+})
+.catch((error) => {
+  console.error('Erro ao carregar o arquivo JSON:', error);
+});
+
+
+
+
