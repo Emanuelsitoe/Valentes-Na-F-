@@ -1,427 +1,830 @@
-/* ================== RESET BÁSICO ================== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #222;
-  background-color: #fff;
+header{
+    top:0;
+    left:0;
+    width:100%;
+    position:fixed;
+    height:70px;
+    background:#fff;
+    box-shadow:0 2px 4px rgba(0,0,0,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    z-index:10;
 }
 
-/* ================== CABEÇALHO ================== */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  z-index: 100;
+header img{
+    height:50px;
 }
 
-header img {
-  height: 50px;
-  max-width: 150px;
+nav ul{
+    display:flex;
+    gap:15px;
+    list-style:none;
 }
 
-/* ================== MENU DE NAVEGAÇÃO ================== */
-nav ul {
-  display: flex;
-  gap: 15px;
-  list-style: none;
+nav a{
+    text-decoration:none;
+    color:#000;
+    padding:5px 10px;
+    border-radius:4px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #000;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-weight: 500;
+nav a:hover{
+    text-decoration:underline;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.hamburger{
+    font-family:'Material Symbols Outlined';
+    font-size:36px;
+    cursor:pointer;
+    display:none;
 }
 
-/* ================== ÍCONE HAMBÚRGUER ================== */
-.hamburger {
-  font-family: 'Material Symbols Outlined';
-  font-size: 36px;
-  cursor: pointer;
-  display: none;
+/* MENU MOBILE */
+.menu{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.5);
+    z-index:20;
+    display:none;
+    align-items:flex-start;
+    justify-content:flex-end;
 }
 
-/* ================== MENU MOBILE ================== */
-.menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-  align-items: flex-start;
-  justify-content: flex-end;
-  z-index: 200;
+.menu nav{
+    background:#fff;
+    width:250px;
+    height:100%;
+    padding-top:30px;
+    box-shadow:-2px 0 5px rgba(0,0,0,0.2);
 }
 
-.menu nav {
-  background: #fff;
-  width: 250px;
-  height: 100%;
-  padding-top: 30px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
+.menu nav ul{
+    flex-direction:column;
+}
+.menu nav a{
+    display:block;
+    padding:10px;
+    border-bottom:1px solid #eee;
+    
+}
+.menu nav a:hover{
+    background:#f4f4f4;
+    text-decoration:none;
 }
 
-.menu.show {
-  display: flex;
+    /* RESPONSIVO */
+@media(max-width:768px){
+    nav{
+        display: none;
+    
+    }
+    .menu nav{
+        display: block;
+    }
+    .hamburger{
+        display:block;
+    }
 }
 
-.menu.show nav {
-  transform: translateX(0);
-}
+main{
+    margin-top: 70px;
+    
+} 
 
-.menu nav ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu nav a {
-  display: block;
-  padding: 12px 15px;
-  border-bottom: 1px solid #eee;
-  color: #000;
-}
-
-.menu nav a:hover {
-  background: #f4f4f4;
-  text-decoration: none;
-}
-
-/* ================== CONTEÚDO PRINCIPAL ================== */
-main {
-  margin-top: 70px;
-}
-
-/* ================== HERO ================== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
+/*centro*/
+ /* ======= ANIMAÇÕES ======= */
+  @keyframes fadeIn {
+    from {
+        opacity: 0; transform: translateY(20px);
+    }
+    to {
+        opacity: 1; transform: translateY(0);
+    }
+  }
 .hero {
-  background: linear-gradient(rgba(255,255,255,0.95), rgba(245,240,230,0.9)),
-              url('IMG_0159.jpg') center/cover no-repeat;
-  text-align: center;
-  color: #222;
-  padding: 160px 10% 120px;
-  animation: fadeIn 1s ease-out;
+    background: linear-gradient( rgba(255,255,255,0.95) 0%, rgba(245,240,230,0.9) 5px),
+                url('IMG_0159.jpg') center/cover no-repeat;
+    text-align: center;
+    color: #222;
+    padding: 160px 10% 120px;
+    animation: fadeIn 1s ease-out;
+
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  color: #111;
-  margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #111;
+    margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.centro .hero button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.centro .hero button{
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.centro .hero button:hover{
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+.centro .hero a{
+    text-decoration: none;
+    color: white;
+}
+main article{
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+    
+}
+main article .cardEventos1{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.centro .hero button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+main article .cardEventos1 .card{
+    height: 470px;
+    background-color: #f8f3f3;
+    width: 270px;
+    
 }
 
-.centro .hero a {
-  text-decoration: none;
-  color: white;
+main article .cardEventos1 img{
+    height: 280px;
+    width: 260px;
 }
 
-/* ================== EVENTOS ================== */
-main article {
-  padding: 20px;
-  text-align: center;
+article .cardEventos1 .card  figcaption{
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
-.cardEventos1 {
-  margin-top: 20px;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+article .card  figcaption{
+    text-align: center;
+}
+article .cardEventos1 .card p{
+    margin-top: 10px
 }
 
-.cardEventos1 .card {
-  background-color: #f8f3f3;
-  width: 270px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+article .card figcaption{
+    padding-top: 30px;
+}
+article .card figcaption h3{
+    font-family: 'Crimson Text', serif;
+    font-size: 24px;
+    color: #033363;
+}
+article .card figcaption .titulo{
+    color: black;
 }
 
-.cardEventos1 img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
+article .card figcaption .paragrafo{
+    color: #4b4b4b;
+    font-size: 14px;
 }
 
-.cardEventos1 .card figcaption {
-  font-family: 'Crimson Text', serif;
-  font-size: 18px;
-  padding: 10px;
+article .card figcaption .Local{
+    color: #4b4b4b;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-/* ================== CULTOS ================== */
-.cultos {
-  text-align: center;
-  padding: 40px 10px;
+article .card figcaption a{
+    text-decoration: none;
+    color: #033363;
+    font-weight: bold;
+}
+article button {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 15px;
+
 }
 
-.cultos h5 {
-  font-size: 2rem;
-  color: #000;
+article button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
-.cultos .dias {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background: linear-gradient(135deg, #fff 0%, #fbf7f0 40%, #f4e7c8 100%);
-  border-radius: 8px;
+article button a{
+    text-decoration: none;
+    color: white;
 }
 
-.dia {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  width: 200px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
+/* CULTOS */
+main .cultos{
+    margin: auto 10px;
+    padding: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 300px;
 }
 
-.dia:hover {
-  transform: translateY(-5px);
+.cultos h5{
+    color: black;
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* ================== FAQ ================== */
+.cultos .dias{
+    width: 700px;
+    height: 210px;
+    font-family: 'Crimson Text', serif;
+    padding-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(124, 35, 35, 0.1);
+    margin: 20px auto;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff 0%, #fbf7f0 40%, #f4e7c8 100%);
+}
+
+.dias .dia{
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    height: 160px;
+
+}
+
+.dias .dia:hover {
+    transform: translateY(-5px);
+}
+
+.cultos .dias h3{
+    font-size: 20px;
+    color: chocolate;
+    margin-top: 10px;
+}
+
+.cultos .dias p{
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* icon whatsapp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}   
+
+.whatsapp img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*Faq*/
+.mainConteiner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
 .faq-container {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  width: 100%;
-  max-width: 700px;
-  padding: 30px;
-  margin: 100px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    margin-top: 100px;
 }
 
 .faq-container h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 1.5rem;
-  color: #111;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    color: #111;
 }
 
 .faq-item {
-  border-bottom: 1px solid #e5e5e5;
-  padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0;
 }
 
 .faq-question {
-  background: none;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  color: #222;
-  position: relative;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #222;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+.faq-question::after{
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
 }
 
-.faq-question::after {
-  content: '+';
-  position: absolute;
-  right: 0;
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
+.faq-question.active{
+color: #0078ff;
+  }
 
-.faq-question.active::after {
-  transform: rotate(45deg);
+.faq-question .active::after{
+    transform: rotate(45deg);
 }
-
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, opacity 0.35s ease;
-  opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
 }
 
-.faq-answer.show {
-  max-height: 300px;
-  opacity: 1;
+.faq-answer p {
+    margin: 10px 0 0;
+    color: #555;
+    line-height: 1.6;
+
 }
 
-/* ================== RODAPÉ ================== */
-footer {
-  background-color: #033363;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.faq-answer.show{
+    max-height: 300px;
+    opacity: 1;
 }
 
-footer .sessoes {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 20px;
+/* Vídeo em Destaque */
+.video {
+    margin-top: 100px;
+    text-align: center;
+} 
+
+.video h2 {
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 20px;
+    
 }
 
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer p {
-  font-size: 14px;
-  color: #ccc;
-}
-
-/* ================== WHATSAPP ================== */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.whatsapp img {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp img:hover {
-  transform: scale(1.1);
-}
-
-/* ================== RESPONSIVIDADE ================== */
-
-/* === Tablets (médias telas) === */
-@media (max-width: 992px) {
-  .hero {
-    padding: 120px 5% 100px;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .cultos .dias {
-    flex-direction: column;
+.video .video-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
-  }
 }
 
-/* === Celulares (telas pequenas) === */
-@media (max-width: 768px) {
-  /* Oculta apenas o menu principal */
-  header nav {
-    display: none;
-  }
+.video iframe {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-  /* Mostra o ícone hambúrguer */
-  .hamburger {
+/*testemuno*/
+
+.testemunho{
+    background: linear-gradient(135deg, #f9f7f1 0%, #e6d3a3 100%);
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 100px;
+    margin: 50px 50px;
+    border-radius: 8px;
+}
+
+.testemunho h2{
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.videos{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.videos iframe{
+    border: none;
+    border-radius: 8px;
+    
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.localizacao{
+    margin: 50px 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.localizacao iframe{
+    width: 350px;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+.contacto{
+    background: linear-gradient(135deg, #f9f7f1 0%, #e6d3a3 100%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.contacto h2{
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.contacto p{
+    font-size: 1rem;    
+    color: #222;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.contacto a{
+    text-decoration: none;
+    color: #033363;
+    font-weight: bold;
+    
+}
+
+/* Rodapé */    
+footer{
+    background-color: #033363;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 50px;
+    height: 280px;
+}
+
+footer .sessoes{
+    display: flex;
+    justify-content: space-around;
+    /*gap: 50px;*/
+    flex-wrap: wrap;
+    height: 190px;
+}
+footer .linkscabecalho{
+    margin-bottom: 10px;
     display: block;
-  }
+    height: 110px;
+}  
 
-  /* Ajusta seções */
-  .hero {
-    padding: 100px 5% 60px;
-  }
-
-  .hero h2 {
-    font-size: 1.6rem;
-  }
-
-  .cardEventos1 .card {
-    width: 90%;
-    max-width: 320px;
-  }
-
-  .videos iframe {
-    width: 100%;
-    height: 180px;
-  }
-
-  footer .sessoes {
-    flex-direction: column;
-    align-items: center;
-  }
+footer .linkscabecalho a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin: 5px 0;
 }
 
-/* === Smartphones muito pequenos === */
-@media (max-width: 480px) {
-  header img {
-    height: 40px;
-  }
 
-  .hero h2 {
-    font-size: 1.4rem;
-  }
 
-  .hero p {
-    font-size: 0.95rem;
-  }
+footer .linkscabecalho a:hover{
+    text-decoration: underline;
+}
 
-  .dia {
-    width: 100%;
-    max-width: 260px;
-  }
+footer .redes-sociais{
+    margin-bottom: 10px;
+    height: 10px;
+}
 
-  .faq-container {
-    padding: 20px 10px;
-  }
+footer .redes-sociais a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin: 5px 0;
+}
+
+.redes-sociais a img{
+    width: 30px;
+    height: 30px;
+    margin: 5px 5px;
+    vertical-align: middle;
+
+}
+
+
+
+footer p{
+    margin: 5px 0;
+    font-size: 14px;
+}
+footer p:first-child{
+    font-weight: bold;
+}
+footer p:last-child{
+    font-size: 12px;
+    color: #ccc;
+}
+
+
+/*responsividade*/
+@media(max-width:600px){
+    .hero{
+        height: 400px;
+    }
+    .hero h2{
+        padding-top: 5px;
+        font-size: 2rem;
+    }
+    .hero p{
+        font-size: 1rem;
+    }
+    main article .cardEventos1{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main .cultos{
+        padding: 20px 5%;
+        height: auto;
+    }
+    .cultos .dias{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 10px;
+    }
+    .cultos .dias .dia{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* faq */
+    .mainConteiner{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .faq-container{
+        width: 100%;
+    }
+
+    .mainConteiner .video{
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .mainConteiner .video-container{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+    /* testemunho */
+    .testemunho{
+        padding: 20px;
+    }
+    .testemunho .videos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .testemunho .videos iframe{ 
+        margin-bottom: 20px;
+        width: 100%;
+        
+        
+    }
+    /* video destaque */
+    .video iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    /* localizacao */
+    .localizacao{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .localizacao iframe{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    /*footer*/
+    footer{
+        height: auto;
+        padding: 20px 10px;
+      
+    }
+    footer .sessoes{
+        align-items: center;
+        height: auto;
+    }
+    footer .linkscabecalho{
+        height: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 5% 80px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    main article .cardEventos1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .cultos {
+        padding: 20px 5%;
+        height: auto;
+    }
+
+    .cultos .dias {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .cultos .dias .dia {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* faq */
+    .mainConteiner{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .faq-container{
+        width: 100%;
+    }
+
+    .mainConteiner .video {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .mainConteiner .video-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+    /* testemunho */
+    .testemunho{
+        padding: 20px;
+    }
+    .testemunho .videos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testemunho .videos iframe{ 
+        margin-bottom: 20px;
+        width: 100%;
+        
+        
+    }
+    /* video destaque */
+    .video iframe {
+        width: 100%;
+    }
+
+    /* localizacao */
+    .localizacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .localizacao iframe {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    /*footer*/
+    footer{
+        height: auto;
+        padding: 20px 10px;
+      
+    }
+    footer .sessoes{
+
+        align-items: center;
+        height: auto;
+    }
+    footer .linkscabecalho{
+        height: auto;
+        margin-bottom: 20px;
+        text-align: center;
+        flex-direction: column;
+    }  
+    footer .redes-sociais{
+        height: auto;
+    }
+}
+
+@media(max-width:1024px){
+   
+    
+    main article .cardEventos1{
+        align-items: center;
+    }
+}
+
+@media(min-width:1200px){
+    main article .cardEventos1{
+        width: 1200px;
+        margin: auto;
+    }
+    .mainConteiner .video-container {
+        width: 1200px;
+        margin: auto;
+    }
+    .mainConteiner .video {
+        width: 1200px;
+        
+    }
+    .localizacao {
+        width: 1200px;
+        margin: auto;
+    }
+    footer .sessoes{
+        width: 1200px;
+        margin: auto;
+    }
+    
 }

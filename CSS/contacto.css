@@ -1,246 +1,493 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
-    padding: 0;
-    border: 0;
     margin: 0;
-}
-header{
-    top: 0;
-    position: fixed;
-    width: 100%;
-}
-header .cabecalho{
-    display: flex;
-    justify-content: space-around;
-    
-    background-color: white;
-}
-
-.cabecalho .searchLogo{
-    display: flex;
-    justify-content: space-between;
-}
-.cabecalho .searchLogo img{
-    width: 130px;
-    height: 70px;
-}
-#search{
-
-    display: flex;
-    align-items: center;
-    border: 1xp solid #ccc;
-    background-color: rgb(247, 240, 240);
-    width: 220px;
-    margin: 20px auto;
-    border-radius: 20px;
-    padding: 5px 10px;
-    color: #4b4b4b;
-    margin-left: 30px;
-}
-#searchInput{
-    padding: 8px;
-    border: none;
-    background-color: transparent;
-    width: 180px;
-    height: 5px;
-    outline: none;
-}
-#search label{
-    height: 20px;
-}
-
-header nav{
-    display: flex;
-    align-items: center;
-}
-header nav ul a{
-    padding: 5px;
-    text-decoration: none;
-    color: black;
-    border: 1px solid transparent;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-header nav ul a:hover {
-    text-decoration: underline ;
-    transition: 1s ease;
+
+header{
+    top:0;
+    left:0;
+    width:100%;
+    position:fixed;
+    height:70px;
+    background:#fff;
+    box-shadow:0 2px 4px rgba(0,0,0,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    z-index:10;
 }
 
-/*Main*/
+header img{
+    height:50px;
+}
+
+nav ul{
+    display:flex;
+    gap:15px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#000;
+    padding:5px 10px;
+    border-radius:4px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.hamburger{
+    font-family:'Material Symbols Outlined';
+    font-size:36px;
+    cursor:pointer;
+    display:none;
+}
+
+/* MENU MOBILE */
+.menu{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.5);
+    z-index:20;
+    display:none;
+    align-items:flex-start;
+    justify-content:flex-end;
+}
+
+.menu nav{
+    background:#fff;
+    width:250px;
+    height:100%;
+    padding-top:30px;
+    box-shadow:-2px 0 5px rgba(0,0,0,0.2);
+}
+
+.menu nav ul{
+    flex-direction:column;
+}
+.menu nav a{
+    display:block;
+    padding:10px;
+    border-bottom:1px solid #eee;
+    
+}
+.menu nav a:hover{
+    background:#f4f4f4;
+    text-decoration:none;
+}
+
+    /* RESPONSIVO */
+@media(max-width:768px){
+    nav{
+        display: none;
+    
+    }
+    .menu nav{
+        display: block;
+    }
+    .hamburger{
+        display:block;
+    }
+}
+
+
+/*MAIN */
+
 main{
     margin-top: 70px;
-    background-image: url(../IMG/);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 700px;
     
-}
-main h3{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 30px;
-    margin-top: 100px;
+} 
+
+/* ======= ANIMAÇÕES ======= */
+  @keyframes fadeIn {
+    from {
+        opacity: 0; transform: translateY(20px);
+    }
+    to {
+        opacity: 1; transform: translateY(0);
+    }
+  }
+.hero {
+    background: linear-gradient( rgba(255,255,255,0.95) 0%, rgba(245,240,230,0.9) ),
+                url('contact.jpg') center/cover;
+    text-align: center;
+    color: #222;
+    padding: 160px 10% 120px;
+    animation: fadeIn 1s ease-out;
 }
 
-
-
-main #info{
-    padding-top: 90px;
-    font-family:'Roboto', sans-serif;
-    display: flex;
-    justify-content: space-around;
-
-}
-#info .endereco span{
-    margin-bottom: 9px;
-}
-
-.email {
-    display: flex;
-    align-items: center;
-    
-}
-.contact{
-    display: flex;
-    align-items: center;
-}
-.location{
-    display: flex;
-    align-items: center;
-}
-
-#info form{
-
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    justify-content: space-evenly;
-}
-#info form input, #info form textarea{
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-family: 'Roboto', sans-serif;
-    width: 350px;
-}
-#info form button{
-    padding: 10px;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 370px;
-    font-family: 'Roboto', sans-serif;
-
-}
-
-main #mapa iframe{
-    width: 400px;
-    height: 300px;
-    border: 0;
-    margin-left: 200px;
-    margin-top: 20px;
-}
-
-/* Footer */
-footer{
-    display: flex;
-    justify-content: space-around;
-    background-color: black;
-    color: #ccc;
-    height: 200px;
-}
-#sec1{
-    
-    padding-top: 10px;
-}
-footer #sec1 figure img{
-    width: 80px;
-    margin-bottom: 10px;
-    height: 50px;
-}
-
-#sec1 form{
-    padding-bottom: 20px;
-}
-form #email{
-    width: 200px;
-    height: 30px;
-    padding: 2px 30px;
-    border-radius: 6px;
-    border: 1px solid;
-    
-}
-form #submit{
-    width: 100px;
-    height: 30px;
-    border: 1px solid;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #ccc;
-    background-color: black;
-}
-
-#sec1 p{
+.hero h2 {
+    font-size: 2.5rem;
+    color: #111;
     margin-bottom: 20px;
-    color: white;
 }
 
-#sec2{
-    padding-top: 10px;
+.hero p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
 }
 
-#sec2 h3{
+main .contacto{
+    padding: 40px 10%;
+    background: #f9f9f9;
+    animation: fadeIn 1s ease-out;
+}
+main .contacto h2{
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 20px;
+}
+main .contacto p{
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+main .contacto ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+main .contacto ul li{
+    font-size: 1rem;
+    color: #333;
     margin-bottom: 10px;
-    color: white;
 }
-#sec2  a{
-    color: white;
-    display: block;
-    margin-bottom: 5px;
+main .contacto ul li a{
+    color: #0066cc;
     text-decoration: none;
 }
-#sec2 a:hover{
+
+main .contacto ul li a img{
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+}
+
+main .contacto ul li a:hover{
     text-decoration: underline;
 }
 
-#sec3{
-    padding-top: 10px;
-    text-align: center;
+/* FORMULÁRIO DE CONTATO */
+main .formulario{
+    padding: 40px 10%;
+    background: #fff;
+    animation: fadeIn 1s ease-out;
 }
 
-#sec3 h3{
-    margin-bottom: 10px;
-    color: black;
-    text-align: center;
+main .formulario h2{
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 20px;
 }
 
+main .formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
 
-#sec3 a{
-    text-decoration: none;
-    color: white;
+main .formulario label{
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+main .formulario input{
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+main .formulario textarea{
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+main .formulario button{
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background: #0066cc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+main .formulario button:hover{
+    background: #005bb5;
     
-    width: 30px;
 }
 
-#sec3 a img{
+/* icon whatsapp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}   
+
+.whatsapp img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*localização mapa*/
+main .localizacao{
+    padding: 40px 10%;
+    background: #f9f9f9;
+    animation: fadeIn 1s ease-out;
+}
+
+main .localizacao h2{
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+main .localizacao iframe{
+    width: 400px;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+main .sabermais{
+    text-align: center;
+    margin: 40px 0;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.sabermais a{
+    color: #0066cc;
+    text-decoration: none;
+}
+.sabermais a:hover{
+    text-decoration: underline;
+}
+
+
+/* Rodapé */    
+footer{
+    background-color: #033363;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 50px;
+    height: 280px;
+}
+
+footer .sessoes{
+    display: flex;
+    justify-content: space-around;
+    /*gap: 50px;*/
+    flex-wrap: wrap;
+    height: 190px;
+}
+footer .linkscabecalho{
+    margin-bottom: 10px;
+    display: block;
+    height: 110px;
+}  
+
+footer .linkscabecalho a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin: 5px 0;
+}
+
+footer .linkscabecalho a:hover{
+    text-decoration: underline;
+}
+
+footer .redes-sociais{
+    margin-bottom: 10px;
+    height: 10px;
+}
+
+footer .redes-sociais a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin: 5px 0;
+}
+
+.redes-sociais a img{
     width: 30px;
     height: 30px;
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    margin: 5px 5px;
+    vertical-align: middle;
+    border-radius: 5px;
 }
 
-#copyright{
-    text-align: center;
-    height: 50px;
-    background-color: white;
-    color: white;
-    
-}
-#copyright p{
-    padding-top: 10px;
+footer p{
+    margin: 5px 0;
     font-size: 14px;
-    color: black;
 }
+footer p:first-child{
+    font-weight: bold;
+}
+footer p:last-child{
+    font-size: 12px;
+    color: #ccc;
+}
+
+
+@media(max-width:600px){
+    .hero{
+        padding: 120px 5% 80px;
+        height: 350px;
+    }
+    .hero h2{
+        font-size: 2rem;
+    }
+    .hero p{
+        font-size: 1rem;
+    }
+    main .contacto, main .formulario, main .localizacao{
+        padding: 20px 5%;
+    }
+    main .formulario form{
+        max-width: 100%;
+    }
+    main .localizacao iframe{
+        height: 300px;
+        width: 100%;
+    }
+    main .sabermais{
+        margin: 20px 0;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    footer{
+        height: auto;
+        padding: 20px 10px;
+    }
+    footer .sessoes{
+        align-items: center;
+        height: auto;
+    }
+    footer .linkscabecalho{
+        height: auto;
+        text-align: center;
+    }
+    footer .redes-sociais{
+        height: auto;
+        text-align: center;
+    }
+    footer p{
+        font-size: 12px;
+
+        margin: 3px 0;
+    }
+
+}
+
+@media (max-width:768px){
+    .hero{
+        padding: 100px 5% 60px;
+    }
+    .hero h2{
+        font-size: 1.8rem;
+    }
+    .hero p{
+        font-size: 0.9rem;
+    }
+    main .contacto, main .formulario, main .localizacao{
+        padding: 20px 5%;
+    }
+    main .formulario form{
+        max-width: 100%;
+    }
+    main .localizacao iframe{
+        height: 250px;
+        width: 100%;
+    }
+    main .sabermais{
+        margin: 20px 0;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    footer{
+        height: auto;
+        padding: 20px 10px;
+    }
+
+}
+
+@media(max-width:1200px){
+    .hero h2{
+        font-size: 2rem;
+    }
+    .hero p{
+        font-size: 1rem;
+    }
+    main .contacto, main .formulario, main .localizacao{
+        padding: 30px 5%;
+    }
+    main .formulario form{
+        max-width: 100%;
+    }
+    main .localizacao iframe{
+        height: 280px;
+        width: 100%;
+    }
+    main .sabermais{
+        margin: 30px 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    footer{
+        height: auto;
+        padding: 20px 10px;
+    }
+
+}
+
+@media (min-width:1201px){
+    main .localizacao iframe{
+        width: 600px;
+        height: 400px;
+    }
+    footer .sessoes{
+        gap: 100px;
+
+    }
+    footer .linkscabecalho{
+        height: 150px;
+    }
+}
+
