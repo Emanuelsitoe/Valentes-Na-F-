@@ -25,45 +25,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //Pesquisa
-fetch("../JSON/precacoes.json")
-const pregacoes = document.querySelector("#pregacoes");
-
-
-/*const displayVideo = data => {
-    pregacoes.innerHTML ="";
-    data.forEach(video => {
-        pregacoes.innerHTML += ` 
-            <div class="video">
-              <iframe src="${video.url}" title="${video.titulo}" frameborder="0" allowfullscreen></iframe>
-              <h3>${video.titulo}</h3>
-            </div>
-        `
-    });
-}
-
-window.addEventListener("load", displayVideo.bind(null, data))*/
-
-
-
-
-//
-fetch('../JSON/precacoes.json')
+fetch('../JSON/conferencias.json')
   .then(response => response.json())
   .then(videos => {
-    const container = document.getElementById('pregacoes');
+    const container = document.getElementById('conferencia');
 
     // Renderiza os vídeos
     videos.forEach(video => {
       const div = document.createElement('div');
       div.classList.add('video');
       div.innerHTML = `
-        <iframe src="${video.link}" title="${video.titulo}" frameborder="0" allowfullscreen></iframe>
-        <h3>${video.titulo}</h3>
+       <div class="video-card" >
+            <div class="video-thumbnail">
+                <div class="video-thumbnail-placeholder">
+                    <iframe src="${video.url}" title="${video.titulo}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-info">
+                <h3>${video.titulo}</h3>
+                    <p>${video.descricao}</p>
+                <a href="${video.url}" class="watch-link"><iclass="fas fa-eye"></i> Assistir Agora</a>
+            </div>
+        </div>
       `;
       container.appendChild(div);
     });
 
-    // 🔍 Parte de FILTRAGEM
+    //  Parte de FILTRAGEM
     const search = document.querySelector(".input");
     search.addEventListener("input", () => {
       const termo = search.value.toLowerCase();
@@ -71,11 +59,16 @@ fetch('../JSON/precacoes.json')
 
       videosDiv.forEach(div => {
         const titulo = div.querySelector("h3").textContent.toLowerCase();
+        const descricao = div.querySelector("p").textContent.toLowerCase();
         if (titulo.includes(termo)) {
-          div.style.display = "block";
+          div.style.display = "flex";
         } else {
           div.style.display = "none";
         }
+        if (descricao.includes(termo)) {
+          div.style.display = "flex";
+        }
+        
       });
     });
   })

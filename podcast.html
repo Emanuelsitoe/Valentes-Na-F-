@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pregacoes</title>
+    <title>VisionCast</title>
     <link rel="icon" type="image/x-icon" href="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png">
-    <link rel="stylesheet" href="CSS/pregacoes.css">
+    <link rel="stylesheet" href="CSS/podcast.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 </head>
 <body>
     <header class="navbar">
-        <a href="index.html" class="logo"><img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt=""></a>
+        <a href="index.html" class="logo"><img src="ICON/visioncast.jpg" alt=""></a>
         
         <button class="hamburger" aria-label="Abrir Menu">
             <span class="bar"></span>
@@ -26,41 +26,30 @@
                 <li><a href="eventos.html">Eventos</a></li>
                 <li><a href="estudo.html">Estudos</a></li>
                 <li><a href="stream.html">Assistir</a></li>
-                <li><a href="registar.html" class="btn-registo">Registar</a></li>
+                <li><a href="registar.html class="btn-registo"">Registar</a></li>
             </ul>
-        </nav> 
+        </nav>
     </header>
-    <main>
-      <div class="mensagem">
-        <div class="mensagem-content">
-            <h1>
-                Comece Sua Maratona de Fé!
-            </h1>
-            <p>
-                Deixe a Palavra de Deus transformar o seu dia. Escolha uma pregação e sinta-se em casa para mergulhar neste estudo bíblico.
-            </p>
-            <img src="IMG/ImagemInicio.jpg" alt="Foto da Igreja ou uma imagem inspiradora" class="mensagem-image">
-            <a href="#pesquisarPregacoes" class="btn-cta">Ver Todas as Pregações</a>
-        </div>
-      </div>
 
-      <div class="container">
-          <section class="video-player-section">
-              <h2>Pregação em Destaque</h2>
-              <div class="video-container" id="main-video-player">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/owzlNl21JCI?si=OIpQRCiH2F1y-IU3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  <h3 id="video-title">Manifestando a minha profecia</h3>
-                <p id="video-description"></p>
-              </div>
-          </section>
-      </div>
-       <!-- From
-         Uiverse.io by satyamchaudharydev --> 
-      <form class="form" id="pesquisarPregacoes">
+    <main>
+        <section class="podcast">
+            <img src="IMG/visioCast.jpg" alt="logo visioCast">
+            <div class="apresentacao">
+                <div class="menssagem">
+                    <h1>Vision Cast(Danny Timane)</h1>
+                    <p>Bem-vindo ao VisionCast, o podcast oficial do Apóstolo <a href="https://www.facebook.com/danny.timane" target="_blank"><i>Danny Timane</i></a>. Aqui, exploramos temas relevantes para a sua jornada espiritual, financeira, profissional, compartilhamos testemunhos inspiradores e discutimos ensinamentos bíblicos que fortalecem a fé e vida pessoal. Junte-se a nós para reflexões profundas, entrevistas com pessoas de diversos perfis e muito mais. Sintonize-se e deixe o VisionCast ser uma fonte de inspiração e crescimento.</p>
+                </div>
+                <figure class="visioncast">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/f3IX7M-rsKo?si=J-Eq0ciS6ge6bhvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+            </div>
+        </section>
+        
+        <form class="form" id="pesquisarPregacoes">
           <button>
-             <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+            <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
                     <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
+            </svg>
           </button>
           <input class="input" placeholder="Pesquise o tema da pregação" required="" type="text">
           <button class="reset" type="reset">
@@ -68,14 +57,17 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
-      </form>
+        </form>
 
-        <div id="pregacoes">
-            
+        <div id="podcast">
+
         </div>
-        
+        <div class="visionLogo">
+            <a href="https://www.youtube.com/@dennytimane/videos" target="_blank">
+            <img src="ICON/visioncast.jpg" alt="visioncast">
+            </a>
+        </div>
     </main>
-
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section footer-brand">
@@ -87,7 +79,7 @@
                     <i class="fas fa-envelope"></i> contato@valentesnafe.com
                 </p>
                 <p>
-                    <i class="fas fa-map-marker-alt"></i> Local da Sede
+                    <i class="fas fa-map-marker-alt"></i> Laulane, paragem salã0
                 </p>
             </div>
 
@@ -126,7 +118,6 @@
             <p>Desenvolvido pela Equipa de TI - MVF</p>
         </div>
     </footer>
-
-    <script src="JS/pregacoes.js"></script>
+    <script src="JS/podcast.js"></script>
 </body>
 </html>

@@ -4,44 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registar</title>
-    <link rel="stylesheet" href="registar.css">
+    <link rel="icon" type="image/x-icon" href="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png">
+    <link rel="stylesheet" href="CSS/registar.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 </head>
 </head>
 <body>
-    <header>
-        <img src="Proposta de Logo_VNF1_20250414_113856_0000.png" alt="logo">
-        <nav>
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt="logo"></a>
+        
+        <button class="hamburger" aria-label="Abrir Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-links">
             <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="sobre.html">Sobre</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-              <li><a href="assistir.html">Assistir</a></li>
-              <li><a href="aulas.html">Estudos</a></li>
-              <li><a href="eventos.html">Eventos</a></li>
-              <li><a href="#">Livraria</a></li>
-              <li><a href="diversos.html" style="background:rgb(255,123,0);color:#111;">Diversos</a></li>
+                <li><a href="index.html">Início</a></li>
+               <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="estudo.html">Estudos</a></li>
+                <li><a href="stream.html">Assistir</a></li>
             </ul>
-          </nav>
-        <span class="hamburger">menu</span>
+        </nav>
     </header>
-
-    <!-- MENU MOBILE -->
-    <div class="menu" id="menuMobile">
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="assistir.html">Assistir</a></li>
-          <li><a href="aulas.html">Estudos</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="#">Livraria</a></li>
-          <li><a href="diversos.html" style="background:rgb(255,123,0);color:#111;">Diversos</a></li>
-        </ul>
-      </nav>
-    </div>
 
     <main>
         <!-- From Uiverse.io by Yaya12085 --> 
@@ -65,39 +53,60 @@
                 <span>Email</span>
             </label> 
                 
-            <!--<label>
-                <input required="" placeholder="" type="password" class="input">
-                <span>Password</span>
-            </label>
-            <label>
-                <input required="" placeholder="" type="password" class="input">
-                <span>Confirm password</span>
-            </label>-->
+            
             <button class="submit">Enviar</button>
         </form>
     </main>
-    <footer>
-      <section class="sessoes">
-        <div class="linkscabecalho">
-          <a href="">Início</a>
-          <a href="eventos.html">Eventos</a>
-          <a href="aulas.html">Estudos</a>
-          <a href="assistir.html">Assistir</a>
-          <a href="#">Livraria</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="contacto.html">Contacto</a>
-          <a href="diversos.html">Diversos</a>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt="Ministério Valentes na Fé Logo" class="footer-logo">
+                <p>
+                    Propósito, Fé e Amor, unindo famílias espirituais.
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i> contato@valentesnafe.com
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> Local da Sede
+                </p>
+            </div>
 
+            <div class="footer-section footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Conteúdo</h4>
+                <ul>
+                    <li><a href="estudo.html">Estudos</a></li>
+                    <li><a href="stream.html">Assistir</a></li>
+                    <li><a href="registar.html">Registrar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-social">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@dannytimane"><i class="fab fa-youtube"></i><img src="ICON/youtube.png" alt="youtube"></a>
+                    <a href="https://www.instagram.com/ministerio_valentes_na_fe/"><i class="fab fa-instagram"></i><img src="ICON/instagram.png" alt="instagram"></a>
+                    <a href="https://www.tiktok.com/@valentes_na_fe"><i class="fab fa-tiktok"></i><img src="ICON/TikTok.webp" alt="tiktok"></a>
+                    <a href="https://www.facebook.com/ministeriovnf"><i class="fab fa-tiktok"></i><img src="ICON/facebook.png" alt="facebook"></a>
+                </div>
+            </div>
         </div>
-        <div class="redes-sociais">
-          <a href="#" title="Facebook"><img src="fb.png" alt=""></a>
-          <a href="#" title="YouTube"><img src="yt.png" alt=""></a>
-          <a href="#" title="Instagram"><img src="insta.png" alt=""></a>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ministério Valentes na Fé. Todos os direitos reservados.</p>
+            <p>Desenvolvido pela Equipa de TI - MVF</p>
         </div>
-      </section>
-      <p>&copy; 2025 Ministério Valentes na Fé. Todos os direitos reservados.</p>
-      <p>Desenvolvido pela Equipa de TI - MVF</p>
     </footer>
-    <script src="registar.js"></script>
+    <script src="JS/registar.js"></script>
 </body>
 </html>

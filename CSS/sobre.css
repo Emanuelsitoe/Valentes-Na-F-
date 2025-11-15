@@ -7,96 +7,126 @@
     font-family: 'Roboto', sans-serif;
 }
 
-header{
-    top:0;
-    left:0;
-    width:100%;
-    position:fixed;
-    height:70px;
-    background:#fff;
-    box-shadow:0 2px 4px rgba(0,0,0,0.2);
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 20px;
-    z-index:10;
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff; /* Fundo Branco */
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
 }
 
-header img{
-    height:50px;
+.logo {
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
 }
-
-nav ul{
-    display:flex;
-    gap:15px;
-    list-style:none;
+.logo img {
+    height: 60px; 
 }
-
-nav a{
-    text-decoration:none;
-    color:#000;
-    padding:5px 10px;
-    border-radius:4px;
-}
-
-nav a:hover{
-    text-decoration:underline;
-}
-
-.hamburger{
-    font-family:'Material Symbols Outlined';
-    font-size:36px;
-    cursor:pointer;
-    display:none;
-}
-
-/* MENU MOBILE */
-.menu{
-    position:fixed;
-    top:0;
-    right:0;
-    width:100%;
-    height:100vh;
-    background:rgba(0,0,0,0.5);
-    z-index:20;
-    display:none;
-    align-items:flex-start;
-    justify-content:flex-end;
-}
-
-.menu nav{
-    background:#fff;
-    width:250px;
-    height:100%;
-    padding-top:30px;
-    box-shadow:-2px 0 5px rgba(0,0,0,0.2);
-}
-
-.menu nav ul{
-    flex-direction:column;
-}
-.menu nav a{
-    display:block;
-    padding:10px;
-    border-bottom:1px solid #eee;
+/* Estilo dos Links */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Transição Suave */
     
 }
-.menu nav a:hover{
-    background:#f4f4f4;
-    text-decoration:none;
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s; 
 }
 
-    /* RESPONSIVO */
-@media(max-width:900px){
-    nav{
-        display: none;
-    
-    }
-    .menu nav{
+.nav-links li a:hover {
+    background-color: #f0f0f0; 
+    border-radius: 4px;
+}
+
+/* Estilo do Botão Hamburger (Inicialmente escondido no desktop) */
+.hamburger {
+    display: none; /* Esconde no desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001; /* Garante que fique acima dos links no mobile */
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out; /* Transição Suave para o X */
+}
+
+.btn-registo {
+    background-color: #007bff;
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* MEDIA QUERY para telas menores (Responsividade) */
+@media (max-width: 768px) {
+    /* Exibe o botão hamburger */
+    .hamburger {
         display: block;
     }
-    .hamburger{
-        display:block;
+
+    header a img{
+        height: 40px;
+        width: 120px;
+    }
+    /* Esconde o menu de links no mobile por padrão */
+    .nav-links {
+        position: fixed;
+        top: 0; /* Começa no topo */
+        left: 0;
+        height: 100vh;
+        width: 60%; /* Ocupa 60% da tela */
+        background-color: #ffffff; /* Fundo Branco para o menu lateral */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        
+        /* Oculta o menu para a esquerda da tela com transição suave */
+        transform: translateX(-100%); 
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* Estilo do menu aberto */
+    .nav-links.open {
+        transform: translateX(0); /* Desliza para dentro com transição suave */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        padding-top: 60px; /* Espaço para o header */
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .nav-links li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee; /* Linha divisória */
     }
 }
 
@@ -110,12 +140,19 @@ main{
     background-color: white;
 }
 
-
+@keyframes fadeIn {
+    from {
+        opacity: 0; transform: translateY(20px);
+    }
+    to {
+        opacity: 1; transform: translateY(0);
+    }
+}
 /*fundo*/
 
 .hero {
     background: linear-gradient( rgba(245,240,230,0.9) ),
-                url('../IMG/IMG_0149.jpg') top/cover no-repeat;
+                url('../IMG/imagemSobre.jpg') top/cover no-repeat;
     text-align: center;
     color: #222;
     padding: 160px 10px ;
@@ -181,7 +218,9 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
 .container {
     border-radius: 10px;
     max-width: 900px;
-    background: linear-gradient(135deg, #ffffff 0%, #fbf7f0 40%, #f4e7c8 100%);
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
     color: white;
     margin: 40px auto;
     padding: 20px;
@@ -214,56 +253,239 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
     color: #333;
 }
 
+.mainConteiner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+  .faq-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+  }
+
+  .faq-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #111;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0;
+  }
+
+  .faq-question {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #222;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-question.active {
+    color: #0078ff;
+  }
+
+  .faq-question.active::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+  }
+
+  .faq-answer p {
+    margin: 10px 0 0;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .faq-answer.show {
+    max-height: 300px;
+    opacity: 1;
+  }
+/* icon whatsapp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}   
+
+.whatsapp img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
 
 /*congregações*/
-.congregacoes{
+
+.cards-container {
     margin-top: 50px;
-    padding: 20px;
-    color: #34495e;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 25px; 
+    padding: 40px 20px;
+    background-color: #f7f7f7; 
 }
 
-.congregacoes h1{
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #34495e;
-    font-family: 'Crimson Text', serif;
-    text-transform: uppercase;
+/* Estilo para cada card individual */
+.church-card {
+    background-color: #ffffff; /* Fundo branco para os cards */
+    border-radius: 12px; /* Cantos mais arredondados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra mais suave e elevada */
+    padding: 30px; /* Mais padding interno para espaçamento */
+    width: 340px; /* Largura fixa para desktop */
+    max-width: 100%; /* Garante que não ultrapasse a tela em mobile */
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo do card em coluna */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover suave */
 }
 
-
-
-.congregacoes .informacoes{
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #fbf7f0 40%, #f4e7c8 100%);
+.church-card:hover {
+    transform: translateY(-5px); /* Leve levantamento no hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12); /* Sombra mais pronunciada no hover */
 }
 
-.informacoes span{
-    display: block;
-    background: rgba(255,255,255,0.08);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-}
-span:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+/* Título do Card */
+.card-title {
+    font-size: 24px;
+    color: #333333; /* Cor mais escura para o título */
+    margin-bottom: 25px; /* Espaço maior abaixo do título */
+    font-weight: 700; /* Mais negrito */
+    border-bottom: 2px solid #f0f0f0; /* Linha sutil abaixo do título */
+    padding-bottom: 15px;
 }
 
-span p{
-    font-size: 1rem;
-    margin: 9px 0;
-    color: #333;
+/* Grupo de Informações (Endereço, Telefone, Email, Cultos) */
+.card-info-group {
+    display: flex;
+    align-items: flex-start; /* Alinha o ícone e texto ao topo */
+    margin-bottom: 15px; /* Espaço entre os grupos de informação */
 }
-p a{
-    color: #5198df;
+
+.card-info-group:last-child {
+    margin-bottom: 0; /* Remove margem do último item */
+}
+
+.info-label {
+    font-weight: 600; /* Negrito para os rótulos (Endereço, Telefone, etc.) */
+    color: #555555;
+    margin-right: 10px; /* Espaço entre o rótulo e o conteúdo */
+    min-width: 90px; /* Garante que os rótulos tenham uma largura mínima */
+    display: flex;
+    align-items: center;
+}
+
+.info-content {
+    color: #444444;
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
+}
+
+.info-content a {
+    color: #007bff; /* Cor padrão para links, ajuste se tiver uma cor da marca */
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-content a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Cor do link no hover */
+}
+
+/* Ícones */
+.icon {
+    color: #888888; /* Cor neutra para os ícones */
+    margin-right: 8px; /* Espaço entre o ícone e o texto do rótulo */
+    font-size: 18px; /* Tamanho dos ícones */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .church-card {
+        width: 100%; /* Cards ocupam a largura total em telas menores */
+        padding: 25px;
+    }
+    
+    .card-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .card-info-group {
+        flex-direction: column; /* Empilha o rótulo e o conteúdo em telas pequenas */
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .info-label {
+        margin-bottom: 5px; /* Espaço entre o rótulo e o conteúdo quando empilhados */
+        min-width: unset; /* Remove a largura mínima para o rótulo */
+    }
+
+    .info-content {
+        padding-left: 26px; /* Alinha o conteúdo abaixo do ícone */
+    }
+}
+
+/* Ajustes finos para telas muito pequenas */
+@media (max-width: 480px) {
+    .cards-container {
+        padding: 20px 15px;
+    }
+
+    .church-card {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 20px;
+        text-align: center; /* Centraliza o título em telas muito pequenas */
+        margin-bottom: 15px;
+    }
+
+    .info-label {
+        font-size: 15px;
+    }
+
+    .info-content {
+        font-size: 15px;
+    }
 }
 
 /* ------------------ ANIMAÇÃO DE ENTRADA ------------------ */
@@ -281,91 +503,154 @@ p a{
   animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Rodapé */    
-footer{
-    background-color: #033363;
-    color: white;
-    text-align: center;
-    padding: 15px 10px;
-    margin-top: 50px;
-    height: 280px;
+.footer {
+    margin-top: 40px;
+    background-color: #0B2B4C; /* Azul Marinho Escuro */
+    color: #ffffff;
+    padding: 40px 20px 0; /* Padding superior e lateral */
+    font-family: Arial, sans-serif;
 }
 
-footer .sessoes{
-    display: flex;
-    justify-content: space-around;
-    /*gap: 50px;*/
-    flex-wrap: wrap;
-    height: 190px;
+/* Container principal (usando Flexbox para responsividade) */
+.footer-container {
+    max-width: 1200px; /* Limite de largura para desktop */
+    margin: 0 auto;
+    display: flex; /* Habilita o layout em coluna/linha */
+    flex-wrap: wrap; /* Permite que as colunas quebrem */
+    justify-content: space-between; /* Distribui o espaço entre as colunas */
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
 }
-footer .linkscabecalho{
-    margin-bottom: 10px;
-    display: block;
-    height: 110px;
-}  
 
-footer .linkscabecalho a{
-    color: white;
+.footer-section {
+    width: 20%; /* Define a largura de cada seção para desktop (25% se for 4 colunas) */
+    margin-bottom: 20px;
+}
+
+/* Estilo para links */
+.footer a {
+    color: #ffffff;
     text-decoration: none;
-    font-size: 14px;
-    display: block;
-    margin: 5px 0;
+    transition: color 0.3s ease; /* Efeito de hover suave */
 }
 
-
-
-footer .linkscabecalho a:hover{
-    text-decoration: underline;
+.footer a:hover {
+    color: #ffd700; /* Destaque, como um amarelo/laranja sutil para combinar com o logo */
 }
 
-footer .redes-sociais{
-    margin-bottom: 10px;
-    height: 10px;
-}
-
-footer .redes-sociais a{
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    display: block;
-    margin: 5px 0;
-}
-
-.redes-sociais a img{
-    width: 30px;
-    height: 30px;
-    margin: 5px 5px;
-    vertical-align: middle;
-
-}
-
-
-
-footer p{
-    margin: 5px 0;
-    font-size: 14px;
-}
-footer p:first-child{
+/* Títulos das Seções */
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
     font-weight: bold;
+    color: #f7f7f7;
 }
-footer p:last-child{
+
+/* Lista de links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+/* Logo */
+.footer-logo {
+    max-width: 150px; /* Ajuste o tamanho da logo */
+    margin-bottom: 15px;
+}
+
+/* Seção de Redes Sociais */
+.social-icons a {
+    font-size: 24px;
+    margin-right: 15px;
+
+    
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.social-icons a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    
+    color: #0B2B4C; /* Texto escuro no hover */
+}
+
+/* Faixa de Copyright (rodapé inferior) */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
     font-size: 12px;
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.7);
 }
+
+/* Responsividade (Para telas pequenas) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Empilha as colunas */
+    }
+
+    .footer-section {
+        width: 100%; /* Ocupa a largura total */
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-brand, .footer-social {
+        order: -1; /* Move a marca e redes sociais para o topo */
+    }
+    
+    .footer-brand {
+        margin-bottom: 40px;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-links ul li {
+        width: 50%; /* Faz com que os links fiquem lado a lado em 2 colunas */
+        margin-bottom: 5px;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+}
+
 
 /*Responsicidade*/
 
 @media(max-width: 600px){
-    main .centro .hero{
+    main .centro .hero {
+        
         padding-top: 60px;
     }
     main #conteudoSobre :where(.nossaFe, .nossaMissao){
         width: 100%;
     }
+    main .congregacoes{
+        width: 300px;
+        padding: 10px;
+    
+    }
     main .congregacoes .informacoes{
         grid-template-columns: 1fr;
-        width: 330px;
-        padding: 0 20px;
+       
+        
         height: auto;
         
     }
@@ -374,12 +659,14 @@ footer p:last-child{
 
 @media(max-width: 760px){
     main .hero{
+        height: 260px ;
         padding-top: 100px;
         
     }
     .hero h2{
         font-size: 1.2rem;
     }
+    
 }
 
 @media(max-width: 1024px){
@@ -391,11 +678,13 @@ footer p:last-child{
     .hero h2{
        margin-top: 50px;
     }
+    /*footer*/
+   
     
 
 }
 
-@media(main-width: 1025px){
+@media(min-width: 1025px){
     main .centro{
         height: auto;
         

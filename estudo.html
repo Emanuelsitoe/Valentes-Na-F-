@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Bíblica - Ministério Valentes Na Fé</title>
+    <link rel="icon" type="image/x-icon" href="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png">
+    <link rel="stylesheet" href="CSS/estudo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt=""></a>
+        
+        <button class="hamburger" aria-label="Abrir Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+               <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="estudo.html">Estudos</a></li>
+                <li><a href="stream.html">Assistir</a></li>
+                <li><a href="registar.html" class="btn-registo">Registar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="navegacao">
+            <h1>Escola Bíblica do Ministério Valentes Na Fé</h1>
+            <p>Crescendo na Graça e no Conhecimento de Cristo</p>
+            <nav>
+                <ul>
+                    <li><a href="#aulas">Aulas em Vídeo</a></li>
+                    <li><a onclick="toggleForm('inscricao-form')" href="#">Inscrição</a></li>
+                    <li><a onclick="toggleForm('resumo-form')" href="#">Resumo da Aula</a></li>
+                </ul>
+            </nav>
+         </div>
+
+        <div class="container">
+            
+            <section class="main-content" id="aulas">
+                <div class="video-section">
+                    <h2>Aula Bíblica em Destaque</h2>
+                    <p>Assista ao nosso estudo mais recente. Use o formulário ao lado para se inscrever ou enviar seu resumo!</p>
+                    
+                    <div class="video-embed">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/uiFI_OaMF-Q?si=-2oeItoLsps5VVgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <h3>Próximos Temas de Estudo:</h3>
+                    <ul>
+                        <li>Estudo sobre a <b>Santidade</b></li>
+                        <li>Estudo Sobre a <b>Graça</b></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <section class="form-section" id="inscricao">
+                    <h3 onclick="toggleForm('inscricao-form')">Inscreva-se na Escola Bíblica</h3>
+                    <div id="inscricao-form" class="form-content active">
+                        <form id="formInscricao" >
+                            <p>Preencha seus dados para garantir sua vaga.</p>
+                            <label for="nome_inscricao">Nome Completo:</label>
+                            <input type="text" id="nome_inscricao" name="nome" required>
+                            
+                            <label for="email_inscricao">E-mail:</label>
+                            <input type="email" id="email_inscricao" name="email" required>
+                            
+                            <label for="telefone_inscricao">Telefone/WhatsApp:</label>
+                            <input type="text" id="telefone_inscricao" name="telefone">
+                            
+                            <button type="submit">Enviar Inscrição</button>
+                        </form>
+                    </div>
+                </section>
+                
+                <hr>
+
+                <section class="form-section" id="resumo">
+                    <h3 onclick="toggleForm('resumo-form')">Envie seu Resumo da Aula</h3>
+                    <div id="resumo-form" class="form-content">
+                        <form action="" id="formResumo">
+                            <p>Compartilhe seu aprendizado.</p>
+                            <label for="nome_resumo">Seu Nome:</label>
+                            <input type="text" id="nome_resumo" name="nome_aluno" required>
+                            
+                            <label for="tema_resumo">Tema da Aula Assistida:</label>
+                            <input type="text" id="tema_resumo" name="tema" required>
+                            
+                            <label for="resumo_texto">Seu Resumo:</label>
+                            <textarea id="resumo_texto" name="resumo" required></textarea>
+                            
+                            <button type="submit">Enviar Resumo</button>
+                        </form>
+                    </div>
+                </section>
+                
+            </aside>
+        </div>
+        
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h4>✅ Sucesso!</h4>
+                <p id="modalMessage">Seu formulário foi enviado com sucesso.</p>
+                <button class="modal-button" onclick="closeModal()">Fechar</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt="Ministério Valentes na Fé Logo" class="footer-logo">
+                <p>
+                    Propósito, Fé e Amor, unindo famílias espirituais.
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i> contato@valentesnafe.com
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> Local da Sede
+                </p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Conteúdo</h4>
+                <ul>
+                    <li><a href="estudo.html">Estudos</a></li>
+                    <li><a href="stream.html">Assistir</a></li>
+                    <li><a href="registar.html">Registrar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-social">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@dannytimane"><i class="fab fa-youtube"></i><img src="ICON/youtube.png" alt="youtube"></a>
+                    <a href="https://www.instagram.com/ministerio_valentes_na_fe/"><i class="fab fa-instagram"></i><img src="ICON/instagram.png" alt="instagram"></a>
+                    <a href="https://www.tiktok.com/@valentes_na_fe"><i class="fab fa-tiktok"></i><img src="ICON/TikTok.webp" alt="tiktok"></a>
+                    <a href="https://www.facebook.com/ministeriovnf"><i class="fab fa-tiktok"></i><img src="ICON/facebook.png" alt="facebook"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ministério Valentes na Fé. Todos os direitos reservados.</p>
+            <p>Desenvolvido pela Equipa de TI - MVF</p>
+        </div>
+    </footer>
+
+    <script src="JS/estudo.js"></script>
+</body>
+</html>

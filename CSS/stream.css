@@ -1,3 +1,5 @@
+/* Estilos CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
@@ -68,6 +70,7 @@
     background-color: #333;
     transition: all 0.3s ease-in-out; 
 }
+
 .btn-registo {
     background-color: #007bff;
     color: #fff !important;
@@ -77,8 +80,6 @@
     margin-left: 20px;
     transition: background-color 0.3s ease;
 }
-
-
 
 
 
@@ -129,274 +130,138 @@
     }
 }
 
- /*Main*/
+:root {
+            /* Definição de Cores */
+            --cor-principal: #007BFF; /* Azul Principal */
+            --cor-secundaria: #6CA6F5; /* Azul Claro para Destaques */
+            --cor-fundo: #F8F9FA; /* Branco Suave / Cinza Claro */
+            --cor-texto: #343A40; /* Preto Suave */
+            --cor-borda: #E9ECEF; /* Borda leve */
+        }
 
-main{
-    margin: auto;
-    margin-top: 70px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    font-family: 'Roboto', sans-serif;
-    background-color: white;
-}
 
-main .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    
-
-}
-
-/* mensagem de boas vindas*/
-.mensagem {
-    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradiente azul moderno */
-    color: white;
-    padding: 60px 20px;
+.imagem-principal{
     text-align: center;
-    border-radius: 0 0 15px 15px; /* Bordas arredondadas na parte inferior */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    height: 600px;
-
+    margin-top: 90px;
 }
 
-
-.mensagem h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
+.imagem-principal img{
+    width: 800px;
+    height: 400px;
+    border-radius: 12px;
+    margin-bottom: 5px;
 }
-
-.mensagem p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.mensagem-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-cta {
-    display: inline-block;
-    background-color: #ffc107; /* Amarelo de destaque */
-    color: #333;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-cta:hover {
-    background-color: #e0a800;
-    transform: translateY(-2px);
-}
-
-/* Seções */
-section {
-    padding: 40px 0;
-    height: 600px;
-
     
+.container {
+    max-width: 1200px;
+    margin: 5px auto;
+    padding: 20px;
+    background-color: #FFFFFF; /* Fundo branco puro para o conteúdo principal */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
 }
+.cabecalho {
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--cor-borda);
+        }
 
-h2 {
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #007bff;
-    padding-bottom: 5px;
-    display: inline-block;
-}
-.container .descricaoVideo{
-  margin-bottom: px;
-}
+        .cabecalho h1 {
+            font-size: 2.5em;
+            color: var(--cor-principal);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
 
+        .cabecalho p {
+            font-size: 1.1em;
+            color: var(--cor-texto);
+        }
 
-/* Player de Vídeo Principal */
-.video-player-section {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    margin-top: -30px; /* Sobrepõe levemente a seção Hero */
-  
+        .links-section {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+            gap: 20px; /* Espaço entre os cards */
+            justify-content: center; /* Centraliza os cards */
+        }
 
-}
+        .link-card {
+            flex: 1;
+            min-width: 280px; /* Largura mínima para o card */
+            max-width: 350px; /* Largura máxima para o card */
+            background-color: #FFFFFF;
+            border: 1px solid var(--cor-borda);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
 
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Proporção 16:9 para vídeos responsivos */
-    height: 0;
-    margin-bottom: 15px;
-    overflow: hidden;
-    border-radius: 8px;
-}
+        .link-card:hover {
+            transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
 
-.video-container iframe {
-    width: 700px;
-    height:400px;
-}
+        .link-card a {
+            text-decoration: none;
+            color: var(--cor-principal);
+            font-size: 1.4em;
+            font-weight: 700;
+            display: block; /* O link ocupa todo o card */
+        }
 
-#video-title {
-    color: #333;
-    margin-top: 15px;
-}
+        .link-card p {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #6C757D; /* Cinza para a descrição */
+        }
 
-#video-description {
-    color: #666;
-    font-size: 0.95rem;
-}
+        /* Estilos dos Ícones (Emojis para simplicidade) */
+        .icon {
+            font-size: 3em;
+            color: var(--cor-secundaria);
+            margin-bottom: 15px;
+            display: block;
+        }
 
-/*mediaquery para telas menores*/
-@media (max-width: 768px) {
-    .mensagem {
-        padding: 40px 15px;
-    }
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .links-section {
+                flex-direction: column; /* Empilha os cards em telas menores */
+                align-items: center;
+            }
+            .link-card {
+                max-width: 80%; /* Ocupa a maior parte da largura */
+            }
+        }
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}   
 
-    .mensagem h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.7rem;
-    }
+.whatsapp img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-
-/*pesquisa*/
-
-.form{
-    margin: 50px auto;
-
-}
-
-.form button {
-  border: none;
-  background: none;
-  color: #8b8ba7;
-}
-/* styling of whole input container */
-.form {
-  --timing: 0.3s;
-  --width-of-input: 320px;
-  --height-of-input: 40px;
-  --border-height: 2px;
-  --input-bg: #fff;
-  --border-color: #2f2ee9;
-  --border-radius: 30px;
-  --after-border-radius: 1px;
-  position: relative;
-  width: var(--width-of-input);
-  height: var(--height-of-input);
-  display: flex;
-  align-items: center;
-  padding-inline: 0.8em;
-  border-radius: var(--border-radius);
-  transition: border-radius 0.5s ease;
-  background: var(--input-bg,#fff);
-}
-/* styling of Input */
-.input {
-  font-size: 0.9rem;
-  background-color: transparent;
-  width: 500px;
-  height: 100%;
-  padding-inline: 0.5em;
-  padding-block: 0.7em;
-  border: none;
-}
-/* styling of animated border */
-.form:before {
-  content: "";
-  position: absolute;
-  background: var(--border-color);
-  transform: scaleX(0);
-  transform-origin: center;
-  width: 100%;
-  height: var(--border-height);
-  left: 0;
-  bottom: 0;
-  border-radius: 1px;
-  transition: transform var(--timing) ease;
-}
-/* Hover on Input */
-.form:focus-within {
-  border-radius: var(--after-border-radius);
-}
-
-input:focus {
-  outline: none;
-}
-/* here is code of animated border */
-.form:focus-within:before {
-  transform: scale(1);
-}
-/* styling of close button */
-/* == you can click the close button to remove text == */
-.reset {
-    border: none;
-    background: none;
-    opacity: 0;
-    visibility: hidden;
-}
-/* close button shown when typing */
-input:not(:placeholder-shown) ~ .reset {
-  opacity: 1;
-  visibility: visible;
-}
-/* sizing svg icons */
-.form svg {
-  width: 17px;
-  margin-top: 3px;
-}
-
-/*videos*/
-
-#pregacoes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  flex-direction: row;
-  margin: auto;
-}
-
-.video {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform .3s;
-  width: 400px;
-  margin: auto;
-  
-}
-
-.video:hover {
-  transform: translateY(-5px);
-}
-
-.video iframe {
-  width: 400px;
-  height: 200px;
-  border: none;
-  display: flex;
-
-}
-
-.video h3 {
-  padding: 12px;
-  text-align: center;
-  font-size: 18px;
-  color: #333;
-}
-
 /* Rodapé */    
+
 .footer {
     margin-top: 40px;
     background-color: #0B2B4C; /* Azul Marinho Escuro */
@@ -523,49 +388,5 @@ input:not(:placeholder-shown) ~ .reset {
     .social-icons {
         text-align: center;
     }
-}
-
-/* Responsividade do rodapé */
-@media(max-width: 480px){
-    main .container iframe{
-        width: 100%;
-        height: auto;
-    }
-    .video-player-section{
-        height: auto;
-    }
-    main form{
-       margin: auto;
-    }
-
-    main #pregacoes{
-        margin: auto;
-    }
-    #pregacoes .video{
-        width: 290px;
-    }
-    #pregacoes .video iframe{
-        width: 290px;
-        height: auto;
-    }
-}
-@media(max-width: 768px){
-    main #pregacoes{
-        margin: auto;
-
-    }
-    #pregacoes .video{
-        width: 320px;
-        
-
-    }
-    #pregacoes .video iframe{
-        width: 320px;
-        height: 185px;
-    }
-    
-
-
-
 }
 

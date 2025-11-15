@@ -1,15 +1,36 @@
-const btn = document.querySelector(".hamburger");
-const menu = document.getElementById("menuMobile");
+document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona o botão hamburger e o container dos links
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-btn.addEventListener("click", () => {
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    
+    // Adiciona o evento de clique ao botão
+    hamburger.addEventListener('click', () => {
+        // Alterna a classe 'open' no nav-links
+        navLinks.classList.toggle('open');
+        
+        // Opcional: Alternar uma classe no próprio hamburger para animação de X
+        hamburger.classList.toggle('open');
+    });
+
+    // Opcional: Fechar o menu ao clicar em um link (útil no mobile)
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('open');
+            }
+        });
+    });
 });
 
-    // Fechar ao clicar fora
-menu.addEventListener("click", e => {
-    if(e.target === menu){ 
-        menu.style.display = "none"; 
-    }
-});
+// Faq
+  const questions = document.querySelectorAll('.faq-question');
 
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      q.classList.toggle('active');
+      const answer = q.nextElementSibling;
+      answer.classList.toggle('show');
+    });
+  });

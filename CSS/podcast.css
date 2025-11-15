@@ -133,143 +133,95 @@
 
 main{
     margin: auto;
-    margin-top: 70px;
-
-    font-family: 'Roboto', sans-serif;
-    background-color: white;
-}
-
-main .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    
+    margin-top: 90px;
 
 }
-
-/* mensagem de boas vindas*/
-.mensagem {
-    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradiente azul moderno */
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    border-radius: 0 0 15px 15px; /* Bordas arredondadas na parte inferior */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    height: 600px;
-
-}
-
-
-.mensagem h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.mensagem p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.mensagem-image {
+.podcast img{
     width: 100%;
-    max-width: 400px;
-    height: auto;
     border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-cta {
-    display: inline-block;
-    background-color: #ffc107; /* Amarelo de destaque */
-    color: #333;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-cta:hover {
-    background-color: #e0a800;
-    transform: translateY(-2px);
-}
-
-/* Seções */
-section {
-    padding: 40px 0;
-    height: 600px;
-
-    
-}
-
-h2 {
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #007bff;
-    padding-bottom: 5px;
-    display: inline-block;
-}
-.container .descricaoVideo{
-  margin-bottom: px;
-}
-
-
-/* Player de Vídeo Principal */
-.video-player-section {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    margin-top: -30px; /* Sobrepõe levemente a seção Hero */
-  
-
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Proporção 16:9 para vídeos responsivos */
-    height: 0;
     margin-bottom: 15px;
-    overflow: hidden;
+
+}
+
+main .podcast{
+    padding: 20px;
+    background: #f9f9f9;
+    margin-bottom: 20px;
     border-radius: 8px;
-}
 
-.video-container iframe {
-    width: 700px;
-    height:400px;
 }
-
-#video-title {
+.podcast .apresentacao{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    font-style: italic;
+    flex-wrap: wrap;
+}
+.apresentacao .menssagem{
+    width: 500px;;
+    padding: 10px;
+    border-radius: 4px;
+}
+main .podcast h2{
+    margin-bottom: 15px;
     color: #333;
-    margin-top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+main .podcast p{
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.6;
 }
 
-#video-description {
-    color: #666;
-    font-size: 0.95rem;
+.podcast p a{
+    color: blue;
+    text-decoration: underline;
+}
+.podcast p i{
+    color: black;
+    font-size: 20px;
 }
 
-/*mediaquery para telas menores*/
-@media (max-width: 768px) {
-    .mensagem {
-        padding: 40px 15px;
-    }
-
-    .mensagem h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.7rem;
-    }
+.podcast .apresentacao{
+    display: flex;
+    justify-content: space-evenly;
+}
+.apresentacao .visioncast{
+   padding: 10px;
+   margin-top: 10px;
 }
 
-/*pesquisa*/
+.apresentacao .visioncast iframe{
+   border: none;
+   border-radius: 4px;
+}
 
+.visionLogo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.visionLogo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}   
+
+.visionLogo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* styling of whole input container */
 .form{
     margin: 50px auto;
 
@@ -280,7 +232,6 @@ h2 {
   background: none;
   color: #8b8ba7;
 }
-/* styling of whole input container */
 .form {
   --timing: 0.3s;
   --width-of-input: 320px;
@@ -355,9 +306,9 @@ input:not(:placeholder-shown) ~ .reset {
   margin-top: 3px;
 }
 
-/*videos*/
+/*Podcast*/
 
-#pregacoes {
+main #podcast {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
@@ -373,7 +324,7 @@ input:not(:placeholder-shown) ~ .reset {
   overflow: hidden;
   transition: transform .3s;
   width: 400px;
-  margin: auto;
+  margin: 0 auto;
   
 }
 
@@ -395,6 +346,8 @@ input:not(:placeholder-shown) ~ .reset {
   font-size: 18px;
   color: #333;
 }
+
+
 
 /* Rodapé */    
 .footer {
@@ -428,9 +381,7 @@ input:not(:placeholder-shown) ~ .reset {
     transition: color 0.3s ease; /* Efeito de hover suave */
 }
 
-.footer a:hover {
-    color: #ffd700; /* Destaque, como um amarelo/laranja sutil para combinar com o logo */
-}
+
 
 /* Títulos das Seções */
 .footer-section h4 {
@@ -460,8 +411,6 @@ input:not(:placeholder-shown) ~ .reset {
 .social-icons a {
     font-size: 24px;
     margin-right: 15px;
-
-    
     width: 40px;
     height: 40px;
     display: inline-flex;
@@ -525,47 +474,81 @@ input:not(:placeholder-shown) ~ .reset {
     }
 }
 
-/* Responsividade do rodapé */
-@media(max-width: 480px){
-    main .container iframe{
+/*resposividade*/
+@media(max-width:600px){
+    main #podcast {
+        grid-template-columns: 1fr;
+    }
+
+    main .apresentacao{
+        flex-direction: column;
+
+    }
+    .apresentacao .menssagem{
         width: 100%;
-        height: auto;
     }
-    .video-player-section{
-        height: auto;
+    .apresentacao .visioncast iframe{
+        width: 100%;
+        height: 200px;
+        margin:  auto;
     }
-    main form{
-       margin: auto;
-    }
-
-    main #pregacoes{
-        margin: auto;
-    }
-    #pregacoes .video{
-        width: 290px;
-    }
-    #pregacoes .video iframe{
-        width: 290px;
-        height: auto;
-    }
+    
 }
+
 @media(max-width: 768px){
-    main #pregacoes{
-        margin: auto;
+    .apresentacao .visioncast iframe{
+        height: 300px;
 
     }
-    #pregacoes .video{
-        width: 320px;
-        
-
+    main #podcast {
+        display: block;
+        margin: 0 auto;
     }
-    #pregacoes .video iframe{
-        width: 320px;
-        height: 185px;
+     main #podcast .video{
+        margin-bottom: 50px;
     }
     
 
+}
+
+@media(max-width: 480px){
+   .podcast .visioncast iframe{
+        width: 100%;
+        height: 200px;
+    }
+    #podcast{
+        margin: 0 auto;
+        margin-right: 40px;
+        
+    }
+    main #podcast .video{
+        display: block;
+        width: 390px;
+        margin-bottom: 50px;
+        
+        
+    }
+    #podcast .video iframe{
+        width: 100%;
+        height: auto;
+    }
+
 
 
 }
 
+@media(max-width: 1024px){
+    .podcast .visioncast iframe{
+        height: 300px;
+    }
+    main #podcast .video{
+        width: 350px;
+        height: 250px;
+        gap: 30px;
+        
+    }
+     #podcast .video iframe{
+        width: 100%;
+        height: 190px;
+    }
+}

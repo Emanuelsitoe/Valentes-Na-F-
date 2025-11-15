@@ -3,51 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Responsivo</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Página Inicial</title>
+    <link rel="icon" type="image/x-icon" href="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png">
+    <link rel="stylesheet" href="CSS/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 </head>
 <body> 
-    <header>
-        <a href="index.html"><img src="Proposta de Logo_VNF1_20250414_113856_0000.png" alt="logo"></a>
-        <nav>
+    <header class="navbar">
+        <a href="#" class="logo"><img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt=""></a>
+        
+        <button class="hamburger" aria-label="Abrir Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-links">
             <ul>
-              <li><a href="sobre.html">Sobre</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-              <li><a href="assistir.html">Assistir</a></li>
-              <li><a href="aulas.html">Estudos</a></li>
-              <li><a href="eventos.html">Eventos</a></li>
-              <li><a href="#">Livraria</a></li>
-              <li><a href="registar.html" style="background-color: #007BFF;color: white;">Registar-se</a></li>
-              <li><a href="diversos.html" style="background:rgb(255,123,0);color:#111;">Diversos</a></li>
+                <li><a href="index.html">Início</a></li>
+               <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="estudo.html">Estudos</a></li>
+                <li><a href="stream.html">Assistir</a></li>
+                <li><a href="registar.html" class="btn-registo">Registar</a></li>
             </ul>
-          </nav>
-        <span class="hamburger">menu</span>
+        </nav>
     </header>
-
-    <!-- MENU MOBILE -->
-    <div class="menu" id="menuMobile">
-      <nav>
-        <ul>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="assistir.html">Assistir</a></li>
-          <li><a href="aulas.html">Estudos</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="#">Livraria</a></li>
-          <li><a href="registar.html" style="background-color: #007BFF;color: white">Registar-se</a></li>
-          <li><a href="diversos.html" style="background:rgb(255,123,0);color:#111;">Diversos</a></li>
-        </ul>
-      </nav>
-    </div>
 
     <main>
       <div class="centro">
         <section id="inicio" class="hero">
           <h2>Amar a Deus. Amar as Pessoas. Servir com Alegria.</h2>
-          <p>Uma comunidade unida pela fé, esperança e amor em Cristo.</p>
-          <button><a href="">Saber mais</a></button>
+          <p>Ministério Valentes Na Fé, uma igreja unida pela fé, esperança e amor em Cristo.</p>
+          <button><a href="sobre.html">Saber mais</a></button>
           <button><a href="registar.html">Registar-se</a></button>
         </section>
       </div>
@@ -55,7 +44,7 @@
         <h2>Próximos eventos</h2>
         <div class="cardEventos1">
             <div class="card">
-                <img src="IMG-20250929-WA0025.jpg" alt="">
+                <img src="IMG/IMG-20250929-WA0025.jpg" alt="">
                 <figcaption>
                     <h3>13/Dez</h3>
                     <p class="titulo">Unção sem limites</p>
@@ -64,28 +53,9 @@
                     <a href="">Saber mais>></a>
                 </figcaption>
             </div>
-            <div class="card">
-                <img src="IMG-20250929-WA0025.jpg" alt="">
-                <figcaption>
-                    <h3>13/Dez</h3>
-                    <p class="titulo">Unção sem limites</p>
-                    <p class="paragrafo">Sabado, 13 de Dezembro às 14:00</p>
-                    <p class="Local">Local: Por anunciar</p>
-                    <a href="">Saber mais>></a>
-                </figcaption>
-            </div>
-            <div class="card">
-                <img src="IMG-20250929-WA0025.jpg" alt="">
-                <figcaption>
-                    <h3>13/Dez</h3>
-                    <p class="titulo">Unção sem limites</p>
-                    <p class="paragrafo">Sabado, 13 de Dezembro às 14:00</p>
-                    <p class="Local">Local: Por anunciar</p>
-                    <a href="">Saber mais>></a>
-                </figcaption>
-            </div>
+            
         </div>
-        <button><a href="">Ver mais</a></button>
+        <button><a href="eventos.html">Ver mais</a></button>
       </article>
       <!-- SEÇÃO DE CULTOS -->
       <section class="cultos">
@@ -116,40 +86,16 @@
       </section>
 
       <div class="whatsapp">
-        <a href="https://wa.me/258843123456" target="_blank">
-          <img src="whatsapp.webp" alt="WhatsApp">
+        <a href="https://whatsapp.com/channel/0029Vb71WI79RZARr7Jui91D" target="_blank">
+          <img src="ICON/whatsapp.webp" alt="WhatsApp">
         </a>
       </div>
 
-      <div class="mainConteiner">
-        <div class="faq-container">
-          <h2>Perguntas Frequentes</h2>
-
-          <div class="faq-item">
-            <button class="faq-question">O que é o Local Vault?</button>
-            <div class="faq-answer">
-                <p>O Local Vault é um espaço de armazenamento local seguro, usado para guardar dados do usuário ou configurações do aplicativo sem depender da nuvem.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-              <button class="faq-question">Como posso aprender a usá-lo?</button>
-            <div class="faq-answer">
-              <p>Você pode começar estudando os conceitos de armazenamento local e banco de dados locais como IndexedDB, SQLite ou LocalStorage, conforme a tecnologia do seu projeto.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">O Local Vault funciona offline?</button>
-            <div class="faq-answer">
-                <p>Sim, ele é projetado justamente para permitir que os dados sejam acessados e geridos mesmo sem conexão à internet.</p>
-            </div>
-          </div>
-         </div>
+      
         <section class="video">
             <h2>Vídeo em Destaque</h2>
             <div class="video-container">
-              <iframe width="540" height="304" src="https://www.youtube.com/embed/ZWeSV4cQQbU?si=wNP-G9PkyMMNDQD3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/owzlNl21JCI?si=m-U0_cinW-KT131R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
       </div>
@@ -159,46 +105,73 @@
           <div class="videos">
             <iframe width="auto" height="auto" src="https://www.youtube.com/embed/ZWeSV4cQQbU?si=wNP-G9PkyMMNDQD3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <iframe width="auto" height="auto" src="https://www.youtube.com/embed/ZWeSV4cQQbU?si=wNP-G9PkyMMNDQD3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="" height="" src="https://www.youtube.com/embed/ZWeSV4cQQbU?si=wNP-G9PkyMMNDQD3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
           </div>
       </section>
 
       <section class="localizacao">
         <div class="mapa">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d47918.484131640966!2d32.53673215947079!3d-25.92604187547847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-25.9162112!2d32.5484544!4m5!1s0x1ee69098c6153ad5%3A0x2a8180b391c5cbfd!2s3JV6%2BVH9%20Minist%C3%A9rio%20Valentes%20na%20F%C3%A9%2C%20R.%20da%20Beira%2C%20Maputo!3m2!1d-25.9053348!2d32.6114989!5e1!3m2!1spt-PT!2smz!4v1759609801430!5m2!1spt-PT!2smz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.644764885434!2d32.608976860374575!3d-25.905239277167183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee69098c6153ad5%3A0x2a8180b391c5cbfd!2sMinist%C3%A9rio%20Valentes%20na%20F%C3%A9!5e1!3m2!1spt-PT!2smz!4v1762556627043!5m2!1spt-PT!2smz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="contacto">
           <h2>Contacto</h2>
           <p><strong>Endereço:</strong> Bairro de Laulane, Rua da paragem salão - Maputo</p>
           <p><strong>Telefone:</strong> +258 84 312 3456</p>
           <p><strong>Email:</strong>valentesnafe@gmail.com</p>
-          <a href="">Mais informações</a>
+          <a href="contacto.html">Mais informações</a>
         </div>
       </section>
     </main>
-    <footer>
-      <section class="sessoes">
-        <div class="linkscabecalho">
-          <a href="">Início</a>
-          <a href="eventos.html">Eventos</a>
-          <a href="aulas.html">Estudos</a>
-          <a href="assistir.html">Assistir</a>
-          <a href="#">Livraria</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="contacto.html">Contacto</a>
-          <a href="diversos.html">Diversos</a>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt="Ministério Valentes na Fé Logo" class="footer-logo">
+                <p>
+                    Propósito, Fé e Amor, unindo famílias espirituais.
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i> contato@valentesnafe.com
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> Local da Sede
+                </p>
+            </div>
 
+            <div class="footer-section footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Conteúdo</h4>
+                <ul>
+                    <li><a href="estudo.html">Estudos</a></li>
+                    <li><a href="stream.html">Assistir</a></li>
+                    <li><a href="registar.html">Registrar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-social">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@dannytimane"><i class="fab fa-youtube"></i><img src="ICON/youtube.png" alt="youtube"></a>
+                    <a href="https://www.instagram.com/ministerio_valentes_na_fe/"><i class="fab fa-instagram"></i><img src="ICON/instagram.png" alt="instagram"></a>
+                    <a href="https://www.tiktok.com/@valentes_na_fe"><i class="fab fa-tiktok"></i><img src="ICON/TikTok.webp" alt="tiktok"></a>
+                    <a href="https://www.facebook.com/ministeriovnf"><i class="fab fa-tiktok"></i><img src="ICON/facebook.png" alt="facebook"></a>
+                </div>
+            </div>
         </div>
-        <div class="redes-sociais">
-          <a href="#" title="Facebook"><img src="fb.png" alt=""></a>
-          <a href="#" title="YouTube"><img src="yt.png" alt=""></a>
-          <a href="#" title="Instagram"><img src="insta.png" alt=""></a>
-          
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ministério Valentes na Fé. Todos os direitos reservados.</p>
+            <p>Desenvolvido pela Equipa de TI - MVF</p>
         </div>
-      </section>
-      <p>&copy; 2025 Ministério Valentes na Fé. Todos os direitos reservados.</p>
-      <p>Desenvolvido pela Equipa de TI - MVF</p>
     </footer>
-    <script src="index.js"></script>
+    <script src="JS/index.js"></script>
 </body>
 </html>

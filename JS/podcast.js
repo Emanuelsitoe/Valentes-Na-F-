@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     // Seleciona o botão hamburger e o container dos links
     const hamburger = document.querySelector('.hamburger');
@@ -25,32 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //Pesquisa
-fetch("../JSON/precacoes.json")
-const pregacoes = document.querySelector("#pregacoes");
-
-
-/*const displayVideo = data => {
-    pregacoes.innerHTML ="";
-    data.forEach(video => {
-        pregacoes.innerHTML += ` 
-            <div class="video">
-              <iframe src="${video.url}" title="${video.titulo}" frameborder="0" allowfullscreen></iframe>
-              <h3>${video.titulo}</h3>
-            </div>
-        `
-    });
-}
-
-window.addEventListener("load", displayVideo.bind(null, data))*/
-
-
-
-
-//
-fetch('../JSON/precacoes.json')
-  .then(response => response.json())
+fetch("../JSON/podcast.json")
+.then(response => response.json())
   .then(videos => {
-    const container = document.getElementById('pregacoes');
+    const container = document.getElementById('podcast');
 
     // Renderiza os vídeos
     videos.forEach(video => {

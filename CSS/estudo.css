@@ -1,0 +1,547 @@
+/* Estilo do Menu (Cor Branca) */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff; /* Fundo Branco */
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+.logo img {
+    height: 60px; 
+}
+/* Estilo dos Links */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Transição Suave */
+    
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s; /* Transição Suave no hover */
+}
+
+.nav-links li a:hover {
+    background-color: #f0f0f0; /* Fundo levemente cinza no hover */
+    border-radius: 4px;
+}
+
+/* Estilo do Botão Hamburger (Inicialmente escondido no desktop) */
+.hamburger {
+    display: none; /* Esconde no desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001; /* Garante que fique acima dos links no mobile */
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out; /* Transição Suave para o X */
+}
+.btn-registo {
+    background-color: #007bff;
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* MEDIA QUERY para telas menores (Responsividade) */
+@media (max-width: 768px) {
+    /* Exibe o botão hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    header a img{
+        height: 40px;
+        width: 120px;
+    }
+    /* Esconde o menu de links no mobile por padrão */
+    .nav-links {
+        position: fixed;
+        top: 0; /* Começa no topo */
+        left: 0;
+        height: 100vh;
+        width: 60%; /* Ocupa 60% da tela */
+        background-color: #ffffff; /* Fundo Branco para o menu lateral */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        
+        /* Oculta o menu para a esquerda da tela com transição suave */
+        transform: translateX(-100%); 
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* Estilo do menu aberto */
+    .nav-links.open {
+        transform: translateX(0); /* Desliza para dentro com transição suave */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        padding-top: 60px; /* Espaço para o header */
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .nav-links li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee; /* Linha divisória */
+    }
+}
+
+:root {
+            --cor-principal: #004d99; /* Azul Marinho Profundo */
+            --cor-secundaria: #4a90e2; /* Azul Claro/Céu */
+            --cor-fundo: #f0f8ff; /* Branco Suave/Azul Claro Quase Branco */
+            --cor-texto: #333;
+            --cor-clara: #ffffff;
+            --cor-sucesso: #28a745; /* Verde para sucesso */
+            --sombra-caixa: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos Globais e Reset */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        /* Header e Navegação */
+        .navegacao {
+            background-color: var(--cor-principal);
+            color: var(--cor-clara);
+            padding: 130px 40px;
+            text-align: center;
+            box-shadow: var(--sombra-caixa);
+            
+
+            
+        }
+
+        .navegacao h1 {
+            margin: 0;
+            font-size: 2.8em;
+        }
+
+        .navegacao ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+.navegacao nav ul li a {
+            color: var(--cor-clara);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 1px solid var(--cor-clara);
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .navegacao ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: var(--cor-secundaria);
+        }
+
+        /* Layout Principal (Flexbox) */
+        main .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center; /* Centraliza o conteúdo se houver espaço */
+        }
+
+        .main-content, .sidebar {
+            background-color: var(--cor-clara);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--sombra-caixa);
+        }
+
+        .main-content {
+            flex: 3;
+            max-width: 750px; /* Limita a largura máxima do vídeo e conteúdo */
+        }
+
+        /* --- ALTERAÇÃO PRINCIPAL AQUI --- */
+        .sidebar {
+            flex: 1;
+            /* Largura máxima menor para os formulários */
+            max-width: 350px; 
+            min-width: 280px;
+            padding: 20px; /* Reduz um pouco o padding interno */
+        }
+        /* -------------------------------- */
+        
+        /* Responsividade para telas menores */
+        @media (max-width: 900px) {
+            
+            .container {
+                flex-direction: column;
+                align-items: center; /* Centraliza blocos em coluna */
+            }
+            .main-content, .sidebar {
+                max-width: 90%; /* Ajusta para preencher 90% da tela */
+                min-width: 90%;
+            }
+        }
+
+        /* Seção de Vídeos */
+        .video-section h2 {
+            color: var(--cor-principal);
+            border-bottom: 3px solid var(--cor-secundaria);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .video-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Estilos dos Formulários */
+        .form-section h3 {
+            color: var(--cor-secundaria);
+            cursor: pointer;
+            padding: 10px 0;
+            margin-top: 20px;
+            border-bottom: 2px solid var(--cor-fundo);
+            transition: color 0.3s;
+        }
+        
+        .form-section h3:hover {
+            color: var(--cor-principal);
+        }
+
+        .form-content {
+            display: none; 
+            padding: 10px 0; /* Reduz um pouco o padding do conteúdo do formulário */
+        }
+
+        .form-content.active {
+            display: block;
+        }
+
+        form label {
+            display: block;
+            margin-top: 12px; /* Espaçamento menor entre os campos */
+            font-weight: 600;
+            color: var(--cor-principal);
+            font-size: 0.95em;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px; /* Reduz o padding interno dos inputs */
+            margin-top: 4px; /* Espaçamento menor */
+            border: 1px solid #ddd;
+            border-radius: 4px; /* Borda um pouco mais sutil */
+            box-sizing: border-box;
+            font-size: 0.9em;
+        }
+        
+        form input:focus, form textarea:focus {
+            border-color: var(--cor-secundaria);
+            outline: none;
+        }
+
+        form button {
+            background-color: var(--cor-secundaria);
+            color: var(--cor-clara);
+            padding: 10px 20px; /* Botão menor */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px; /* Espaçamento menor */
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #3875be;
+        }
+
+        /* Estilos da Janela Modal (Popup de Sucesso) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: var(--cor-clara);
+            padding: 25px; /* Padding um pouco menor */
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--sombra-caixa);
+            max-width: 350px; /* Largura da modal um pouco menor */
+            width: 90%;
+            animation: fadeIn 0.3s;
+        }
+        
+        .modal-content h4 {
+            color: var(--cor-sucesso);
+            font-size: 1.4em;
+            margin-top: 0;
+        }
+
+        .modal-content p {
+            margin-bottom: 15px;
+        }
+
+        .modal-button {
+            background-color: var(--cor-principal);
+            color: var(--cor-clara);
+            padding: 8px 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal-button:hover {
+            background-color: #003366;
+        }
+        
+        /* Animação simples de Fade In */
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+
+/* Rodapé */    
+.footer {
+    margin-top: 40px;
+    background-color: #0B2B4C; /* Azul Marinho Escuro */
+    color: #ffffff;
+    padding: 40px 20px 0; /* Padding superior e lateral */
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal (usando Flexbox para responsividade) */
+.footer-container {
+    max-width: 1200px; /* Limite de largura para desktop */
+    margin: 0 auto;
+    display: flex; /* Habilita o layout em coluna/linha */
+    flex-wrap: wrap; /* Permite que as colunas quebrem */
+    justify-content: space-between; /* Distribui o espaço entre as colunas */
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
+}
+
+.footer-section {
+    width: 20%; /* Define a largura de cada seção para desktop (25% se for 4 colunas) */
+    margin-bottom: 20px;
+}
+
+/* Estilo para links */
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Efeito de hover suave */
+}
+
+.footer a:hover {
+    color: #ffd700; /* Destaque, como um amarelo/laranja sutil para combinar com o logo */
+}
+
+/* Títulos das Seções */
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f7f7f7;
+}
+
+/* Lista de links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+/* Logo */
+.footer-logo {
+    max-width: 150px; /* Ajuste o tamanho da logo */
+    margin-bottom: 15px;
+}
+
+/* Seção de Redes Sociais */
+.social-icons a {
+    font-size: 24px;
+    margin-right: 15px;
+
+    
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.social-icons a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    
+    color: #0B2B4C; /* Texto escuro no hover */
+}
+
+/* Faixa de Copyright (rodapé inferior) */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsividade (Para telas pequenas) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Empilha as colunas */
+    }
+
+    .footer-section {
+        width: 100%; /* Ocupa a largura total */
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-brand, .footer-social {
+        order: -1; /* Move a marca e redes sociais para o topo */
+    }
+    
+    .footer-brand {
+        margin-bottom: 40px;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-links ul li {
+        width: 50%; /* Faz com que os links fiquem lado a lado em 2 colunas */
+        margin-bottom: 5px;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+}
+
+
+/* Animações Keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 992px) {
+    
+    .header .nav {
+        display: none; 
+    }
+    
+}
+
+
+
+
+
