@@ -1,0 +1,158 @@
+/* Importação de Fonte e Reset Básico */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Fundo suave */
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    max-width: 500px;
+    width: 90%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0; /* Inicialmente invisível para animação de entrada */
+    transform: translateY(20px);
+}
+
+/* Animação de Entrada do Container */
+.container.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Título Principal */
+.title {
+    color: #007bff; /* Azul vibrante */
+    font-size: 2.2rem;
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+/* Caixa de Mensagem (Destacada) */
+.message-box {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #e6f7ff; /* Fundo azul claro para destaque */
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.greeting {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+.body-text {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    font-weight: 600;
+    color: #007bff;
+}
+
+/* Link de Retorno (Botão Estilizado) */
+.back-link {
+    display: inline-block;
+    background-color: #ffc107; /* Amarelo/Dourado (Contraste e calor) */
+    color: #333;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+}
+
+.back-link:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+.arrow {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* Texto de Rodapé */
+.footer-text {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* --- ÍCONE DE VERIFICAÇÃO (ANIMAÇÃO) --- */
+.icon-check {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.icon-check svg {
+    display: block;
+}
+
+.icon-check circle {
+    stroke-width: 4;
+    stroke: #007bff;
+    fill: none;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: circle-anim 0.9s ease-in-out forwards;
+}
+
+.icon-check path {
+    stroke-width: 4;
+    stroke: #ffffff;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: #007bff; /* Preenche a área do 'check' */
+    animation: check-anim 0.3s ease-in-out 0.6s forwards;
+}
+
+@keyframes circle-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes check-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .message-box {
+        padding: 15px;
+    }
+    .icon-check {
+        width: 60px;
+        height: 60px;
+    }
+}
