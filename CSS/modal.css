@@ -1,0 +1,191 @@
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; 
+    color: #333;
+    min-height: 100vh;
+}
+
+/* --- ESTILO PARA A PÁGINA DE ENTRADA --- */
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.banner {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 60px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeInScale 0.8s ease-out;
+}
+
+.headline { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; }
+.subtitle { font-size: 1.1rem; font-weight: 300; margin-bottom: 30px; }
+.camera-icon { font-size: 3rem; margin-right: 15px; display: inline-block; vertical-align: middle; }
+
+/* Botão Entrar na Transmissão */
+.live-button {
+    display: inline-block;
+    background-color: #ff4500; 
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 15px rgba(255, 69, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s;
+    animation: pulse 1.5s infinite;
+}
+.live-button:hover {
+    background-color: #e63e00;
+    transform: scale(1.05);
+    animation: none;
+}
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* --- ESTILOS DA MODAL DE VÍDEO (PRINCIPAL) --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%; 
+    max-width: 900px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    animation: slideInTop 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.modal-header { text-align: center; margin-bottom: 20px; position: relative; }
+.modal-header h2 { color: #007bff; margin: 0; padding-right: 40px; }
+.close-button {
+    color: #aaa; float: right; font-size: 36px; font-weight: bold;
+    text-decoration: none; position: absolute; top: 0; right: 0; transition: color 0.3s;
+}
+.close-button:hover, .close-button:focus { color: #ff4500; cursor: pointer; }
+
+/* Video e Recursos */
+.video-wrapper {
+    position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+    margin-bottom: 15px; border-radius: 8px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+.resources-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px; margin-top: 20px; padding-top: 15px; border-top: 1px dashed #eee;
+}
+.resource-card {
+    background-color: #f8f9fa; padding: 15px; border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); border-top: 3px solid #ffc107; 
+    transition: transform 0.3s ease; text-align: left;
+}
+.resource-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+.resource-card h3 { font-size: 1.1rem; margin-top: 0; color: #333; }
+.resource-card p { font-size: 0.9rem; color: #6c757d; margin-bottom: 10px; }
+.resource-card a { color: #007bff; text-decoration: none; font-weight: 600; }
+
+/* --- ESTILOS DA SUB-MODAL DE DOAÇÃO --- */
+.sub-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; /* MAIS ALTO que a modal principal */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.3s ease-out;
+}
+.sub-modal-content {
+    background-color: #ffffff;
+    margin: 10vh auto; 
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 650px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: scaleUp 0.3s ease-out;
+}
+.sub-modal-header { border-bottom: 2px solid #ffc107; padding-bottom: 10px; margin-bottom: 20px; text-align: center; }
+.sub-modal-header h2 { color: #ff4500; margin: 0; }
+.sub-close-button {
+    color: #aaa; float: right; font-size: 30px; font-weight: bold;
+    text-decoration: none; position: absolute; top: 5px; right: 15px; transition: color 0.3s;
+}
+.sub-close-button:hover { color: #ff4500; }
+
+/* Detalhes da Conta */
+.account-details {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 20px 0;
+}
+.detail-card {
+    background-color: #e6f7ff; border-left: 5px solid #007bff; padding: 15px; border-radius: 5px;
+}
+.detail-card h3 { color: #0056b3; font-size: 1.1rem; margin-top: 0; }
+.pix-key {
+    background-color: #fff; padding: 8px; border-radius: 4px; border: 1px dashed #007bff;
+    margin: 10px 0; font-size: 1.1rem; word-break: break-all;
+}
+.key-label { font-weight: 400; color: #666; display: block; font-size: 0.9em; }
+.copy-btn {
+    background-color: #ff4500; color: white; border: none; padding: 8px 15px;
+    border-radius: 5px; cursor: pointer; font-weight: 600; transition: background-color 0.3s;
+}
+.copy-btn:hover { background-color: #e63e00; }
+.online-donation-link {
+    display: block; text-align: center; background-color: #ffc107;
+    color: #333; padding: 10px; border-radius: 5px; text-decoration: none;
+    font-weight: 600; margin-top: 10px; transition: background-color 0.3s;
+}
+.online-donation-link:hover { background-color: #e0a800; }
+
+/* --- ANIMAÇÕES E RESPONSIVIDADE --- */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 69, 0, 0); }
+    100% { transform: scale(1); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideInTop { from { transform: translateY(-100px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes scaleUp { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+@media (max-width: 950px) {
+    .modal-content { margin: 10px auto; max-width: 95%; }
+}
+@media (max-width: 768px) {
+    .resources-grid { grid-template-columns: 1fr; }
+    .account-details { grid-template-columns: 1fr; }
+}

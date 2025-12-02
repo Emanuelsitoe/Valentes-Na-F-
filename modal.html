@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferência Ao Vivo - Ministério Valentes na Fé</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/modal.css">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="banner">
+            <h1 class="headline">
+                <span class="camera-icon"></span> ASSISTA AGORA: CONFERÊNCIA AO VIVO
+            </h1>
+            <p class="subtitle">
+                Conecte-se com a Palavra e a Adoração em tempo real.
+            </p>
+            
+            <button id="openModalBtn" class="live-button live-active">
+                <span class="dot"></span> Entrar na Transmissão
+            </button>
+        </div>
+    </div>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            
+            <header class="modal-header">
+                <a href="#" id="closeModalBtn" class="close-button">&times;</a>
+                <h2>Transmissão Valentes na Fé</h2>
+            </header>
+
+            <div class="video-section">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="" 
+                        id="youtubePlayer"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="resources-grid">
+                <!--<div class="resource-card">
+                    <h3>Caderno de Estudos</h3>
+                    <p>Baixe o material de apoio para acompanhar a ministração da Palavra.</p>
+                    <a href="#">Fazer Download</a>
+                </div>-->
+                <div class="resource-card">
+                    <h3>Fale Conosco (Oração)</h3>
+                    <p>Deixe seu pedido de oração em tempo real.</p>
+                    <a href="#">Enviar Pedido</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Ofertas e Dízimos</h3>
+                    <p>Contribua para o Reino e ajude o Ministério.</p>
+                    <a href="#" id="openDonationModalLink">Clique para Doar</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Link Direto</h3>
+                    <p>Se a live não abrir aqui, veja direto no YouTube.</p>
+                    <a href="https://www.youtube.com/@dannytimane" target="_blank">Abrir no YouTube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="donationModal" class="sub-modal">
+        <div class="sub-modal-content">
+            <header class="sub-modal-header">
+                <a href="#" id="closeDonationModalBtn" class="sub-close-button">&times;</a>
+                <h2>Contribua com o Ministério</h2>
+            </header>
+
+            <section class="donation-info">
+                <p>Sua doação é vital para a expansão do Reino e para a manutenção de nossos projetos sociais. Que Deus multiplique sua generosidade!</p>
+                
+                <div class="account-details">
+                    <div class="detail-card">
+                        <h3>Transferência Bancária</h3>
+                        <p><strong>Banco:</strong> BCI</p>
+                        <p><strong>NOME:</strong> Ministério Valentes na Fé</p>
+                        <p><strong>NIB:</strong> 00080000947057571010180</p>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3>M-PESA</h3>
+                        <p><strong>NOME:</strong> Danny Timane</p>
+                        <p><strong>NIB:</strong> (+258) 845000022</p>
+                        
+                    </div>
+
+                    <div class="detail-card">
+                        <h3>Doação Online</h3>
+                        <p><strong>NOME:</strong> Danny Timane</p>
+                        <p><strong>NIB:</strong>(+258) 865000022</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/modal.js"></script>
+</body>
+</html>
