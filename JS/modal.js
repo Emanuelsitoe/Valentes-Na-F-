@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- VARIÁVEL FIXA DO VÍDEO ---
     // **IMPORTANTE: SUBSTITUA ESTA VARIÁVEL PELO LINK DE INCORPORAÇÃO (EMBED) DO SEU VÍDEO**
     // Ex: "https://www.youtube.com/embed/LIVE_STREAM_ID" ou um vídeo de placeholder
-    const FIXED_VIDEO_URL = "https://www.youtube.com/embed/i7iHphYgsTo?si=EE2Japz2LNody9Se"; // Exemplo de placeholder
+    const FIXED_VIDEO_URL = "https://www.youtube.com/embed/Zb4Xb1yC_yQ?si=1vaYbhahrPFrVaRS"; // Exemplo de placeholder
 
     // --- ELEMENTOS PRINCIPAIS ---
     const modal = document.getElementById('videoModal');
