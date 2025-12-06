@@ -1,4 +1,4 @@
-
+// --- 1. Funcionalidade de Animação ao Scroll (Intersection Observer) ---
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -50,3 +50,14 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         document.body.style.overflow = '';
     });
 });
+
+// Faq
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      q.classList.toggle('active');
+      const answer = q.nextElementSibling;
+      answer.classList.toggle('show');
+    });
+  });

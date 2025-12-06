@@ -79,7 +79,7 @@ body {
 
 /* --- Seção Principal (Hero) --- */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../IMG/ImagemInicio.jpg'); 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../IMG/imagemSobre.jpg'); 
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -370,16 +370,6 @@ main{
     background-color: white;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0; transform: translateY(20px);
-    }
-    to {
-        opacity: 1; transform: translateY(0);
-    }
-}
-/*fundo*/
-
 
 
 
@@ -404,10 +394,8 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) h1{
     margin-bottom: 10px;
     font-weight: bold;
     color: #34495e;
-    
-  font-family: 'Crimson Text', serif;
-
-  text-transform: uppercase;
+    font-family: 'Crimson Text', serif;
+    text-transform: uppercase;
 
 
 }
@@ -427,10 +415,9 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
     color: #34495e;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container {
+.container1 {
     border-radius: 10px;
     max-width: 900px;
-    background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     color: white;
@@ -571,7 +558,7 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
     justify-content: center; 
     gap: 25px; 
     padding: 40px 20px;
-    background-color: #f7f7f7; 
+    margin-bottom: 50px;
 }
 
 /* Estilo para cada card individual */
@@ -647,6 +634,9 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
     font-size: 18px; /* Tamanho dos ícones */
 }
 
+
+
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .church-card {
@@ -715,131 +705,106 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
   animation: fadeInUp 0.6s ease forwards;
 }
 
+/* --- Rodapé (Footer) --- */
 .footer {
-    margin-top: 40px;
-    background-color: #0B2B4C; /* Azul Marinho Escuro */
-    color: #ffffff;
-    padding: 40px 20px 0; /* Padding superior e lateral */
-    font-family: Arial, sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-color-light);
+    padding: 40px 0 20px;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
-/* Container principal (usando Flexbox para responsividade) */
-.footer-container {
-    max-width: 1200px; /* Limite de largura para desktop */
-    margin: 0 auto;
-    display: flex; /* Habilita o layout em coluna/linha */
-    flex-wrap: wrap; /* Permite que as colunas quebrem */
-    justify-content: space-between; /* Distribui o espaço entre as colunas */
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: left;
+    margin-bottom: 30px;
 }
 
-.footer-section {
-    width: 20%; /* Define a largura de cada seção para desktop (25% se for 4 colunas) */
-    margin-bottom: 20px;
-}
-
-/* Estilo para links */
-.footer a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease; /* Efeito de hover suave */
-}
-
-.footer a:hover {
-    color: #ffd700; /* Destaque, como um amarelo/laranja sutil para combinar com o logo */
-}
-
-/* Títulos das Seções */
-.footer-section h4 {
-    font-size: 18px;
+.footer-block h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
     margin-bottom: 15px;
-    font-weight: bold;
-    color: #f7f7f7;
+    color: var(--secondary-color);
 }
 
-/* Lista de links */
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
+.footer-block p {
     margin-bottom: 8px;
-}
-
-/* Logo */
-.footer-logo {
-    max-width: 150px; /* Ajuste o tamanho da logo */
-    margin-bottom: 15px;
-}
-
-/* Seção de Redes Sociais */
-.social-icons a {
-    font-size: 24px;
-    margin-right: 15px;
-
-    
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.social-icons a img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.footer-block i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.footer-block ul {
+    list-style: none;
+}
+
+.footer-block ul a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-block ul a:hover {
+    color: var(--secondary-color);
+}
+
+.social-block {
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: var(--text-color-light);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    
-    color: #0B2B4C; /* Texto escuro no hover */
+    color: var(--primary-color);
 }
 
-/* Faixa de Copyright (rodapé inferior) */
+.mini-logo {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
 .footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+}
+
+.footer-bottom p:first-child {
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
 /* Responsividade (Para telas pequenas) */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column; /* Empilha as colunas */
-    }
-
-    .footer-section {
-        width: 100%; /* Ocupa a largura total */
+    .footer-grid {
+        grid-template-columns: 1fr;
         text-align: center;
-        margin-bottom: 30px;
     }
 
-    .footer-brand, .footer-social {
-        order: -1; /* Move a marca e redes sociais para o topo */
-    }
-    
-    .footer-brand {
-        margin-bottom: 40px;
+    .footer-block {
+        padding-bottom: 20px;
     }
 
-    .footer-links ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .footer-links ul li {
-        width: 50%; /* Faz com que os links fiquem lado a lado em 2 colunas */
-        margin-bottom: 5px;
-    }
-
-    .social-icons {
+    .footer-block p, .footer-block ul {
         text-align: center;
+        padding-left: 0;
     }
 }
 
@@ -869,44 +834,6 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
     
 }
 
-@media(max-width: 760px){
-    main .hero{
-        height: 260px ;
-        padding-top: 100px;
-        
-    }
-    .hero h2{
-        font-size: 1.2rem;
-    }
-    
-}
 
-@media(max-width: 1024px){
-    main .centro{
-        height: auto;
-        
-    }
 
-    .hero h2{
-       margin-top: 50px;
-    }
-    /*footer*/
-   
-    
 
-}
-
-@media(min-width: 1025px){
-    main .centro{
-        height: auto;
-        
-    }
-
-    .hero h2{
-       margin-top: 50px;
-    }
-    .container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-}
