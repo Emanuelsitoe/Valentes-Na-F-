@@ -8,74 +8,80 @@
     <link rel="stylesheet" href="CSS/contacto.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
     </style>
 </head>
 <body>
-   <header class="navbar">
-        <a href="index.html" class="logo">
-            <img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt="Logo Ministério Valentes Na Fé">
-        </a>
-        
-        <button class="hamburger" aria-label="Abrir Menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <nav class="nav-links" aria-label="Navegação Principal">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="estudo.html">Estudos</a></li>
-                <li><a href="stream.html">Assistir</a></li>
-                <li><a href="registar.html" class="btn-registo">Registar</a></li>
-            </ul>
-        </nav>
-    </header>
+   <div class="hero-section">
+        <header class="navbar">
+            <a href="index.html" class="logo">
+                <img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt="Logo Valentes Na Fé">
+            </a>
+            
+            <button class="hamburger" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="estudo.html">Estudos</a></li>
+                    <li><a href="stream.html">Assistir</a></li>
+                    <li><a href="registar.html" class="btn-registo" style="color: black;">Registar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="hero-content">
+            <h1>Fale Conosco</h1>
+            <p>Ministério Valentes Na Fé, uma igreja unida pela fé, esperança e amor em Cristo.</p>
+            <div class="hero-buttons">
+                <a href="registar.html" class="btn btn-secondary">Registrar-se</a>
+            </div>
+        </div>
+    </div>
 
     <main>
-        <section class="page-hero">
-            <h1>Fale Conosco</h1>
-            <p>Ficaremos felizes em ajudar. Entre em contato pelos meios abaixo.</p>
-        </section>
 
         <section class="contact-layout">
             
-            <div class="contact-info">
-                <h2>Detalhes de Contacto</h2>
-                <div class="info-list">
-                    <div class="info-item">
-                        <span class="material-symbols-outlined">mail</span>
-                        <strong>Email:</strong> 
-                        <a href="mailto:info@exemplo.com">info@exemplo.com</a>
+            <section class="section contact-section" id="contacto">
+            <div class="container contact-content">
+                <div class="contact-info-block animate-on-scroll">
+                    <h2>Contacto</h2>
+                    <p class="contact-subtitle">Estamos aqui para ajudar. Entre em contato conosco.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="details">
+                            <h4>Endereço</h4>
+                            <p><a href="https://www.google.com/maps/place/Minist%C3%A9rio+Valentes+na+F%C3%A9/@-25.905144,32.611615,22012m/data=!3m1!1e3!4m6!3m5!1s0x1ee690a411eeecdf:0x17ee118321711de8!8m2!3d-25.9051438!4d32.6116154!16s%2Fg%2F11gbkvnlgm?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" style="text-decoration: none;">Bairro de Laulane, Rua da paragem salão - Maputo</a></p>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <span class="material-symbols-outlined">phone</span>
-                        <strong>Telefone:</strong> 
-                        <a href="tel:+258844600000">+258 844600000</a>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="details">
+                            <h4>Telefone</h4>
+                            <p><a href="tel:+258 84 312 3456" style="text-decoration: none;">+258 84 312 3456</a></p>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <span class="material-symbols-outlined">location_on</span>
-                        <strong>Endereço:</strong> 
-                        <address>
-                            <a href="https://maps.app.goo.gl/sCxryxUqHmMxerCT8" target="_blank">
-                                Bairro Laulane, Rua da Beira, Paragem Salão
-                            </a>
-                        </address>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:valentesnafe@gmail.com" style="text-decoration: none;">valentesnafe@gmail.com</a></p>
+                        </div>
                     </div>
                 </div>
-
-                <h3>Redes Sociais</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/ministeriovnf" title="Facebook"><img src="ICON/facebook.png" alt="facebook"></a>
-                    <a href="https://www.youtube.com/@dannytimane" title="YouTube"><img src="ICON/youtube.png" alt="youtube"></a>
-                    <a href=" https://www.instagram.com/ministerio_valentes_na_fe/" title="Instagram"><img src="ICON/instagram.png" alt="instagram"></a>
-                    <a href="https://www.tiktok.com/@valentes_na_fe" title="TikTok"><img src="ICON/TikTok.webp" alt="tiktok"></a>
-                </div>
-
             </div>
+        </section>
             
             <div class="contact-form">
                 <h2>Envie-nos uma Mensagem</h2>
@@ -118,53 +124,45 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section footer-brand">
-                <img src="ICON/Proposta de Logo_VNF1_20250414_113856_0000.png" alt="Ministério Valentes na Fé Logo" class="footer-logo">
-                <p>
-                    Propósito, Fé e Amor, unindo famílias espirituais.
-                </p>
-                <p style="display: flex; align-items: center; gap: 8px; margin: 10px 0">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>Valentes@gmail.com
-                </p>
-                <p style="display: flex; align-items: center; gap: 8px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>Rua da Beira, Paragem Salão
-                </p>
+        <div class="container footer-grid">
+            <div class="footer-block">
+                <h4>CONTACTO</h4>
+                <p><i class="fas fa-envelope"></i> valentesnafe@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Rua da Beira, Paragem Salão</p>
             </div>
-
-            <div class="footer-section footer-links">
-                <h4>Links Rápidos</h4>
+            
+            <div class="footer-block">
+                <h4>LINKS RÁPIDOS</h4>
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
                     <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
-
-            <div class="footer-section footer-links">
-                <h4>Conteúdo</h4>
+            
+            <div class="footer-block">
+                <h4>CONTEÚDO</h4>
                 <ul>
                     <li><a href="estudo.html">Estudos</a></li>
                     <li><a href="stream.html">Assistir</a></li>
-                    <li><a href="registar.html">Registrar</a></li>
+                    
                 </ul>
             </div>
-
-            <div class="footer-section footer-social">
-                <h4>Siga-nos</h4>
+            
+            <div class="footer-block social-block">
+                <h4>SIGA-NOS</h4>
                 <div class="social-icons">
-                    <a href="https://www.youtube.com/@dannytimane"><i class="fab fa-youtube"></i><img src="ICON/youtube.png" alt="youtube"></a>
-                    <a href="https://www.instagram.com/ministerio_valentes_na_fe/"><i class="fab fa-instagram"></i><img src="ICON/instagram.png" alt="instagram"></a>
-                    <a href="https://www.tiktok.com/@valentes_na_fe"><i class="fab fa-tiktok"></i><img src="ICON/TikTok.webp" alt="tiktok"></a>
-                    <a href="https://www.facebook.com/ministeriovnf"><i class="fab fa-tiktok"></i><img src="ICON/facebook.png" alt="facebook"></a>
+                    <a href="https://www.youtube.com/@dannytimane" aria-label="YouTube" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a href="https://www.instagram.com/ministerio_valentes_na_fe/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/ministeriovnf" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@valentes_na_fe" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; 2025 Ministério Valentes na Fé. Todos os direitos reservados.</p>
-            <p>Desenvolvido pela Equipa de TI - MVF</p>
+            <p>Propósito: Fé, Esperança e Amor, unindo famílias espirituais.</p>
+            <p>© 2025 Ministério Valentes Na Fé. Todos os direitos reservados. Desenvolvido pela Equipa de T.I. - M.V.F.</p>
         </div>
     </footer>
     

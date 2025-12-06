@@ -1,27 +1,53 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Seleciona o botão hamburger e o container dos links
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+// --- 1. Funcionalidade de Animação ao Scroll (Intersection Observer) ---
 
-    // Adiciona o evento de clique ao botão
-    hamburger.addEventListener('click', () => {
-        // Alterna a classe 'open' no nav-links
-        navLinks.classList.toggle('open');
-        
-        // Opcional: Alternar uma classe no próprio hamburger para animação de X
-        hamburger.classList.toggle('open');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Adiciona a classe 'in-view' quando o elemento entra na tela
+            entry.target.classList.add('in-view');
+        }
+        // Se quiser que a animação seja repetida sempre que o usuário rolar
+        // para fora e voltar:
+        // else {
+        //     entry.target.classList.remove('in-view');
+        // }
     });
-
-    // Opcional: Fechar o menu ao clicar em um link (útil no mobile)
-    const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                navLinks.classList.remove('open');
-                hamburger.classList.remove('open');
-            }
-        });
-    });
+}, {
+    // Margem para iniciar a animação antes do elemento estar totalmente visível
+    rootMargin: '0px 0px -100px 0px' 
 });
 
+// Observa todos os elementos com a classe 'animate-on-scroll'
+document.querySelectorAll('.animate-on-scroll').forEach(element => {
+    observer.observe(element);
+});
+
+
+// --- 2. Funcionalidade do Menu Hamburger (Mobile) ---
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    // Alterna a classe 'active' para exibir/esconder o menu
+    navLinks.classList.toggle('active');
+    // Alterna a classe 'is-active' para animar o ícone do hamburger para 'X'
+    hamburger.classList.toggle('is-active'); 
+
+    // Bloqueia o scroll do body quando o menu está aberto no mobile
+    if (navLinks.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+});
+
+// Opcional: Fechar o menu ao clicar em um link (útil para navegação interna)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('is-active');
+        document.body.style.overflow = '';
+    });
+});
 
