@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resumo Recebido | Valentes na Fé</title>
+<style>
+    /* --- Configurações Iniciais --- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Gradiente vibrante para ser 'chamativo' */
+        background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        color: #333;
+    }
+
+    /* --- Container Principal --- */
+    .confirmation-card {
+        background: rgba(255, 255, 255, 0.98);
+        width: 100%;
+        max-width: 550px;
+        border-radius: 24px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+        /* Animação de entrada do card */
+        opacity: 0;
+        animation: cardEnter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    /* Barra de progresso decorativa no topo */
+    .confirmation-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(90deg, #f1c40f, #e67e22);
+    }
+
+    /* --- Ícone Animado --- */
+    .icon-container {
+        width: 90px;
+        height: 90px;
+        background: #e0f7fa;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: #0097a7;
+        font-size: 40px;
+        box-shadow: 0 10px 20px rgba(0, 151, 167, 0.2);
+        animation: popIn 0.6s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        transform: scale(0); /* Começa invisível */
+    }
+
+    /* --- Tipografia --- */
+    h1 {
+        color: #2c3e50;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .subtext {
+        color: #607d8b;
+        margin-bottom: 30px;
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+
+    /* --- Card do Versículo (Destaque) --- */
+    .verse-card {
+        background: linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%);
+        border-left: 5px solid #ffb300;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 30px 0;
+        position: relative;
+        text-align: left;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .verse-card:hover {
+        transform: scale(1.02);
+    }
+
+    /* Aspas decorativas */
+    .verse-card::after {
+        content: '“';
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 5rem;
+        color: rgba(255, 179, 0, 0.15);
+        font-family: serif;
+        line-height: 0;
+    }
+
+    .verse-text {
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        color: #5d4037;
+        font-size: 1.15rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .verse-ref {
+        font-weight: bold;
+        color: #e65100;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    /* --- Botão de Voltar --- */
+    .btn-return {
+        display: inline-block;
+        background: #2c3e50;
+        color: #fff;
+        padding: 16px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+    }
+
+    .btn-return:hover {
+        background: #34495e;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+    }
+
+    /* --- Animações Keyframes --- */
+    @keyframes cardEnter {
+        0% { transform: translateY(50px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes popIn {
+        0% { transform: scale(0); }
+        100% { transform: scale(1); }
+    }
+
+    /* --- Responsividade --- */
+    @media (max-width: 480px) {
+        .confirmation-card {
+            padding: 30px 20px;
+        }
+        h1 {
+            font-size: 1.6rem;
+        }
+        .verse-text {
+            font-size: 1rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <div class="confirmation-card">
+        
+        <div class="icon-container">
+            📝
+        </div>
+
+        <h1>Resumo Recebido!</h1>
+        <p class="subtext">
+            Glória a Deus! Seu resumo foi enviado com sucesso para nossa equipe pastoral. Continue se dedicando ao aprendizado da Palavra.
+        </p>
+
+        <div class="verse-card">
+            <p class="verse-text">
+                "Procura apresentar-te a Deus aprovado, como obreiro que não tem de que se envergonhar, que maneja bem a palavra da verdade."
+            </p>
+            <div class="verse-ref">
+                2 Timóteo 2:15
+            </div>
+        </div>
+
+        <p style="font-size: 0.9rem; color: #888; margin-bottom: 25px;">
+            Sua próxima aula já está disponível no painel do aluno.
+        </p>
+
+        <a href="estudo.html" class="btn-return">
+            Voltar para as Aulas
+        </a>
+
+    </div>
+</body>
+</html>

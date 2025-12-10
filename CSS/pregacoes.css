@@ -317,6 +317,56 @@ h2 {
     color: #666;
     font-size: 0.95rem;
 }
+/* Variáveis de Cores (Azul e Branco Suave) */
+:root {
+    --cor-principal: #007BFF; 
+    --cor-secundaria: #6CA6F5; 
+}
+/* Header e Banner de Transmissão */
+.assistir {
+    
+    padding: 60px 20px;
+    border-radius: 12px;
+    margin-bottom: 70px;
+}
+        .live-banner {
+            background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .live-banner h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .live-banner p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .btn-live {
+            display: inline-block;
+            background-color: #FF4500; /* Laranja/Vermelho para "Ao Vivo" */
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-live:hover {
+            background-color: #E03E00;
+        
+        }
 
 /*mediaquery para telas menores*/
 @media (max-width: 768px) {

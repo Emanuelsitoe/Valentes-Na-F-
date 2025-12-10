@@ -356,12 +356,12 @@ input:not(:placeholder-shown) ~ .reset {
 
 
         /* Seção de Vídeos/Conferências Anteriores */
-        .videos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
-            gap: 30px;
-            margin-bottom: 40px;
-        }
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
+    gap: 30px;
+    margin-bottom: 40px;
+}
 
         .video-card {
             background-color: var(--cor-card-fundo);
