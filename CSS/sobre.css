@@ -562,6 +562,7 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
 
 /* Estilo para cada card individual */
 .church-card {
+    border-top: 5px solid #f1c40f;
     background-color: #ffffff; /* Fundo branco para os cards */
     border-radius: 12px; /* Cantos mais arredondados */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra mais suave e elevada */
@@ -616,7 +617,7 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
 }
 
 .info-content a {
-    color: #007bff; /* Cor padrão para links, ajuste se tiver uma cor da marca */
+    color: #3498db; /* Cor padrão para links, ajuste se tiver uma cor da marca */
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -703,6 +704,144 @@ main #conteudoSobre :where(.nossaFe, .nossaMissao) p{
 .card {
   animation: fadeInUp 0.6s ease forwards;
 }
+
+
+/*lideranca*/
+.lideranca-section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #2c3e50;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #3498db; /* Cor de destaque */
+        margin: 10px auto 0;
+    }
+
+    /* Container dos Líderes Principais (Vertical) */
+    .senior-leadership {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    /* Grid dos Pastores de Congregação (Horizontal) */
+    .pastors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    /* Design do Card */
+    .card {
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 0; /* Para animação de entrada */
+        animation: fadeInUp 0.8s forwards;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    /* Estilo Especial para o Presidente */
+    .card.president {
+        border-top: 5px solid #3498db; /* Azul */
+        max-width: 500px;
+        width: 100%;
+        animation-delay: 0.1s;
+    }
+
+    /* Estilo Especial para a Esposa */
+    .card.wife {
+        border-top: 5px solid #e91e63; /* Rosa */
+        max-width: 450px;
+        width: 100%;
+        animation-delay: 0.3s;
+    }
+
+    /* Estilo para os Pastores da Grid */
+    .pastors-grid .card {
+        border-top: 5px solid #f1c40f; /* Amarelo/Dourado */
+        animation-delay: 0.5s;
+    }
+
+    /* Imagem Redonda */
+    .card-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 4px solid #f4f6f9;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Tipografia do Card */
+    .card h3 {
+        color: #2c3e50;
+        margin-bottom: 5px;
+        font-size: 1.4rem;
+    }
+
+    .card .role {
+        color: #7f8c8d;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .card p {
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    /* Animação Keyframes */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .card.president, .card.wife {
+            width: 100%;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+        }
+    }
 
 /* --- Rodapé (Footer) --- */
 .footer {
