@@ -88,7 +88,7 @@
                             <input type="email" id="email_inscricao" name="Email" required>
                             
                             <label for="telefone_inscricao">Telefone/WhatsApp:</label>
-                            <input type="text" id="telefone_inscricao" name="Telefone">
+                            <input type="text" id="telefone_inscricao" Name="Telefone">
                             
                             <button type="submit">Enviar Inscrição</button>
 
@@ -105,17 +105,20 @@
                 <section class="form-section" id="resumo">
                     <h3 onclick="toggleForm('resumo-form')">Envie seu Resumo da Aula</h3>
                     <div id="resumo-form" class="form-content">
-                        <form action="" id="formResumo">
+                        <form action="https://formsubmit.co/sitoe2505@gmail.com" id="formResumo" method="post">
                             <p>Compartilhe seu aprendizado.</p>
                             <label for="nome_resumo">Seu Nome:</label>
-                            <input type="text" id="nome_resumo" name="nome_aluno" required>
+                            <input type="text" id="nome_resumo" name="Nome_aluno" required>
                             
                             <label for="tema_resumo">Tema da Aula Assistida:</label>
-                            <input type="text" id="tema_resumo" name="tema" required>
+                            <input type="text" id="tema_resumo" name="Tema" required>
                             
                             <label for="resumo_texto">Seu Resumo:</label>
-                            <textarea id="resumo_texto" name="resumo" required></textarea>
-                            
+                            <textarea id="resumo_texto" name="Resumo" required></textarea>
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_subject" value="Resumo da aula da Escola Bíblica">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
                             <button type="submit">Enviar Resumo</button>
                         </form>
                     </div>

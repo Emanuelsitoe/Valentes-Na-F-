@@ -42,7 +42,7 @@
         }
         
         // JS para Mostrar Modal
-        function showModal(message) {
+        /*function showModal(message) {
             document.getElementById('modalMessage').textContent = message;
             document.getElementById('successModal').style.display = 'flex';
         }
@@ -50,10 +50,10 @@
         // JS para Esconder Modal
         function closeModal() {
             document.getElementById('successModal').style.display = 'none';
-        }
+        }*/
 
         // 1. Lógica para o Formulário de Inscrição
-        document.getElementById('formInscricao').addEventListener('submit', function(e) {
+       /* document.getElementById('formInscricao').addEventListener('submit', function(e) {
             e.preventDefault(); 
             
             showModal('Inscrição enviada com sucesso! Aguarde nosso contato.');
@@ -70,7 +70,7 @@
             
             // Limpar o formulário
             this.reset();
-        });
+        });*/
         
         // Mostrar Inscrição por padrão
         document.addEventListener('DOMContentLoaded', () => {
